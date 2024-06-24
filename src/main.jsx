@@ -6,6 +6,6 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Navbar/>
-  </React.StrictMode>,
+    <Navbar fixed="top"/> 
+  </React.StrictMode>
 )

@@ -1,19 +1,26 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Button} from 'react-bootstrap'
 import { useState } from 'react'
+import {Navbar} from 'react-bootstrap'
+import {Nav} from 'react-bootstrap'
+import {Container} from 'react-bootstrap'
 
-function Navbar() {
+
+function Navibar() {
     
   
     return (
-      <>
-        <Button variant='primary'>Primary</Button>
-        <Button variant='secondary'>Secondary</Button>
-        <Button variant='primary'>Primary</Button>
-        <Button variant='secondary'>Secondary</Button>
-      </>
+      <Navbar>
+        <Container>
+        <Nav className="mx-auto">
+            <Nav.Link className='p-2'>Home</Nav.Link>
+            <Nav.Link className='p-2'>Features</Nav.Link>
+            <Nav.Link className='p-2'>Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
     )
   }
   
-  export default Navbar
+  export default Navibar
   
