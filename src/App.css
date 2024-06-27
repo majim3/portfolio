@@ -1,3 +1,40 @@
 .btn-primary {
   background-color: #35393C ;
 }
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.image-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-container img {
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-container {
+  margin-left: 333px;
+  flex: 2;
+}
+
+.text-container h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.text-container p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+
