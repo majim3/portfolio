@@ -11,7 +11,6 @@ function FirstScreenText() {
     
   
     return (
-      <Navbar>
         <Container >
             <Col >
                 <Row className="container text-center mt-1">
@@ -24,8 +23,7 @@ function FirstScreenText() {
                     <Button className='contact-button' size="sm">Contact me</Button>
                 </Row>                   
             </Col>
-        </Container>
-      </Navbar>
+        </Container>  
     )
   }
   
