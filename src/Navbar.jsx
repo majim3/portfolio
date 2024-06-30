@@ -10,12 +10,12 @@ function Navibar() {
     
   
     return (
-      <Navbar>
+      <Navbar bg="light" expand="lg" fixed="top">
         <Container>
         <Nav className="mx-auto">
             <Nav.Link className='p-2'>Home</Nav.Link>
-            <Nav.Link className='p-2'>Features</Nav.Link>
-            <Nav.Link className='p-2'>Pricing</Nav.Link>
+            <Nav.Link className='p-2'>kokemus</Nav.Link>
+            <Nav.Link className='p-2'>contact</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
