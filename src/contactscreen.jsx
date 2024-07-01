@@ -16,17 +16,37 @@ function ContactScreen() {
         }
     };
 
-    console.log("Form errors:", errors);
-
     return (
         <Container  className="d-flex flex-column align-items-center" >
-            <h2>Contact</h2>
             <Stack direction='horizontal' gap={4} className='justify-content-center'>
+
+            <Container className="mt-4 d-flex justify-content-center custom-container">
+                    <Card className="p-4">
+                        <Card.Body className="text-center">
+                        <Row className="justify-content-center my-3">
+                            <Col xs="auto">
+                                <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-2" />  
+                                <FontAwesomeIcon icon={faYoutube} size="2x" className="mx-2" />
+                                <FontAwesomeIcon icon={ faInstagram} size="2x" className="mx-2" />  
+                                <FontAwesomeIcon icon={faGithub} size="2x" className="mx-2" />    
+                            </Col>
+                        </Row>
+                        <Card.Text className="my-2">Github</Card.Text>
+                        <Card.Text className="my-2">LinkedIn</Card.Text>
+                        <Card.Text className="my-2">Email</Card.Text>
+                        <Button variant="dark" className="mt-3">CV</Button>
+
+                        </Card.Body>
+
+                    </Card>
+                </Container>
+                
                 <Form
                     onSubmit={onSubmit} 
                     action='https://formsubmit.co/f2729bf9f8a855538815e433d4cf5608' 
                     method="POST"
                 >
+                    <h3>Contact me</h3>
                     
                     <Form.Group className="mb-2" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>
@@ -85,28 +105,6 @@ function ContactScreen() {
                     
                     <Button type="submit">Submit</Button>
                 </Form>                  
-                
-                <Container className="mt-4 d-flex justify-content-center custom-container">
-                    <Card className="p-4">
-                        <Card.Body className="text-center">
-                        <Row className="justify-content-center my-3">
-                            <Col xs="auto">
-                                <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-2" />  
-                                <FontAwesomeIcon icon={faYoutube} size="2x" className="mx-2" />
-                                <FontAwesomeIcon icon={ faInstagram} size="2x" className="mx-2" />  
-                                <FontAwesomeIcon icon={faGithub} size="2x" className="mx-2" />    
-                            </Col>
-                        </Row>
-                        <Card.Text className="my-2">Github</Card.Text>
-                        <Card.Text className="my-2">LinkedIn</Card.Text>
-                        <Card.Text className="my-2">Email</Card.Text>
-                        <Button variant="dark" className="mt-3">CV</Button>
-
-                        </Card.Body>
-
-                    </Card>
-                </Container>
-                
                
             </Stack>
         </Container>
