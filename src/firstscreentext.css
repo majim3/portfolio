@@ -1,3 +1,24 @@
 .contact-button{
     width: 150px;
 }
+
+.custom-container {
+    max-width: 250px;
+    margin:0px;
+    padding: 0px;
+  }
+
+  
+.hidden {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.fadeInS {
+    opacity: 1;
+    transition: opacity 5s ease-in-out;
+  }

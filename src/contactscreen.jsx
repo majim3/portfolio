@@ -5,6 +5,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './contactscreen.css'
+import { useInView } from 'react-intersection-observer';
 
 function ContactScreen() {
     const { register, trigger, formState: { errors } } = useForm();
@@ -16,8 +17,12 @@ function ContactScreen() {
         }
     };
 
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 1,
+    });
     return (
-        <Container  className="d-flex flex-column align-items-center" >
+        <Container ref={ref} className={`element ${inView ? 'fadeIn' : 'hidden'} d-flex flex-column align-items-center`} >
             <Stack direction='horizontal' gap={4} className='justify-content-center'>
 
             <Container className="mt-4 d-flex justify-content-center custom-container">
