@@ -4,28 +4,40 @@
 
 section {
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 50px;
 }
 
-.image-container {
+.half {
   flex: 1;
+  border: 1px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.image-container .half {
+  width: 100%;
   margin-right: 20px;
 }
 
-.image-container img {
+.image-container  img {
+  width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
 .text-container {
-  margin-left: 333px;
-  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.text-container h1 {
+.text-container .half h1 {
   margin-bottom: 10px;
   font-size: 40px;
 }

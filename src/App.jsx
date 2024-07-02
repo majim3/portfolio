@@ -6,8 +6,8 @@ import Image from './components/ImageComponent'
 import 'animate.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  
+  const [hide, setHide] = useState(true)
+
 
   return (
     <>
