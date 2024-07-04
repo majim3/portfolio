@@ -6,7 +6,7 @@ import {Navbar} from 'react-bootstrap'
 import {Nav} from 'react-bootstrap'
 import {Container,Col, Image} from 'react-bootstrap'
 import { useInView } from 'react-intersection-observer';
-import catImage from './assets/cat.jpg';
+import catImage from '../assets/cat.jpg';
 
 
 function FirstScreenText() {
