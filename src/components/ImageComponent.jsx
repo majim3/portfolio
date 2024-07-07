@@ -3,12 +3,12 @@ import 'animate.css'
 
 
 function ImageComponent({ src, title, text }) {
-  
+
   return (
     <div className='fullscreen'>
       <section className='animate__animated animate__fadeInLeftBig'>
         <div className='image-container half'>
-          <img src={src} alt="image description"/>
+          <img src={src} alt="image description" />
         </div>
         <div className='text-container half'>
           <div >

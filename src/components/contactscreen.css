@@ -1,10 +1,10 @@
 .custom-container {
-    max-width: 250px;
-    margin:0px;
-    padding: 0px;
-  }
+  max-width: 250px;
+  margin: 0px;
+  padding: 0px;
+}
 
-  
+
 .hidden {
   opacity: 0;
 }
@@ -12,4 +12,13 @@
 .fadeIn {
   opacity: 1;
   transition: opacity 2s ease-in-out;
+}
+
+a.icon-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.icon-link:hover {
+  color: inherit;
 }

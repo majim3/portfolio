@@ -12,7 +12,7 @@ function ContactScreen() {
 
     const onSubmit = async (e) => {
         const isValid = await trigger();
-        if (!isValid){
+        if (!isValid) {
             e.preventDefault();
         }
     };
@@ -21,48 +21,79 @@ function ContactScreen() {
         triggerOnce: true,
         threshold: 1,
     });
+    const HandleClick = (e) => {
+        e.preventDefault();
+    };
+
     return (
         <Container ref={ref} className={`element ${inView ? 'fadeIn' : 'hidden'} d-flex flex-column align-items-center`} >
             <Stack direction='horizontal' gap={4} className='justify-content-center'>
 
-            <Container className="mt-4 d-flex justify-content-center custom-container">
+                <Container className="mt-4 d-flex justify-content-center custom-container">
                     <Card className="p-4">
                         <Card.Body className="text-center">
-                        <Row className="justify-content-center my-3">
-                            <Col xs="auto">
-                                <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-2" />  
-                                <FontAwesomeIcon icon={faYoutube} size="2x" className="mx-2" />
-                                <FontAwesomeIcon icon={ faInstagram} size="2x" className="mx-2" />  
-                                <FontAwesomeIcon icon={faGithub} size="2x" className="mx-2" />    
-                            </Col>
-                        </Row>
-                        <Card.Text className="my-2">Github</Card.Text>
-                        <Card.Text className="my-2">LinkedIn</Card.Text>
-                        <Card.Text className="my-2">Email</Card.Text>
-                        <Button variant="dark" className="mt-3">CV</Button>
+                            <Row className="justify-content-center my-3">
+
+                                <Col xs="auto">
+                                    <a
+                                        href="#"
+                                        className="icon-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-2" />
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="icon-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon={faYoutube} size="2x" className="mx-2" />
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="icon-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon={faInstagram} size="2x" className="mx-2" />
+                                    </a>
+
+                                    <a
+                                        href="#"
+                                        className="icon-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon={faGithub} size="2x" className="mx-2" />
+                                    </a>
+
+
+                                </Col>
+                            </Row>
+                            <Card.Text className="my-2">puh</Card.Text>
+                            <Card.Text className="my-2">Sposti</Card.Text>
+                            <Button variant="dark" className="mt-3">CV</Button>
 
                         </Card.Body>
 
                     </Card>
                 </Container>
-                
+
                 <Form
-                    onSubmit={onSubmit} 
-                    action='https://formsubmit.co/f2729bf9f8a855538815e433d4cf5608' 
+                    onSubmit={onSubmit}
+                    action='https://formsubmit.co/f2729bf9f8a855538815e433d4cf5608'
                     method="POST"
                 >
                     <h3>Contact me</h3>
-                    
-                    <Form.Group className="mb-2" controlId="formBasicName">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" placeholder="Name"  
-                    {...register("name", { 
-                         required: true, 
-                         maxLength: 100, 
 
-                     })} 
-                    />
-                        
+                    <Form.Group className="mb-2" controlId="formBasicName">
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control type="text" placeholder="Name"
+                            {...register("name", {
+                                required: true,
+                                maxLength: 100,
+
+                            })}
+                        />
+
                     </Form.Group>
 
                     {errors.name && (
@@ -71,17 +102,17 @@ function ContactScreen() {
                             {errors.name.type === 'maxLength' && 'Max length is 100 char.'}
                         </p>
                     )}
-                    
-                        <Form.Group className="mb-2" controlId="formBasicEmail">
-                        <Form.Label >Email</Form.Label>
-                        <Form.Control type="text" placeholder="Email" 
-                        {...register("email", { 
-                            required: true, 
-                            pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
 
-                        })} 
+                    <Form.Group className="mb-2" controlId="formBasicEmail">
+                        <Form.Label >Email</Form.Label>
+                        <Form.Control type="text" placeholder="Email"
+                            {...register("email", {
+                                required: true,
+                                pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
+
+                            })}
                         />
-                        
+
                     </Form.Group>
                     {errors.email && (
                         <p className='text-primary'>
@@ -89,28 +120,28 @@ function ContactScreen() {
                             {errors.email.type === 'pattern' && 'Invalid email address.'}
                         </p>
                     )}
-                    
-                        <Form.Group className="mb-2" controlId="formBasicMessage">
+
+                    <Form.Group className="mb-2" controlId="formBasicMessage">
                         <Form.Label>Message</Form.Label>
-                        <Form.Control type="text" placeholder="Message" rows="4" cols="50"
-                        
-                        {...register("Message", { 
-                            required: true, 
-                        maxLength: 2000,
-                        })} />
-                    
-                    
+                        <Form.Control as="textarea" placeholder="Message" rows="4" cols="50"
+
+                            {...register("Message", {
+                                required: true,
+                                maxLength: 1,
+                            })} />
+
+
                     </Form.Group>
-                    {errors.email && (
+                    {errors.Message && (
                         <p className='text-primary'>
                             {errors.Message.type === 'required' && 'This field is required'}
-                            {errors.Message.type === 'maxLenght' && 'Invalid email address.'}
+                            {errors.Message.type === 'maxLength' && 'too long'}
                         </p>
                     )}
-                    
+
                     <Button type="submit">Submit</Button>
-                </Form>                  
-               
+                </Form>
+
             </Stack>
         </Container>
     );
