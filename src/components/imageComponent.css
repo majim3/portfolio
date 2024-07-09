@@ -1,0 +1,8 @@
+.hidden {
+    opacity: 0;
+  }
+
+  .image{
+    width: auto;
+    height: 300px;
+  }

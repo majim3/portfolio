@@ -21,9 +21,7 @@ function ContactScreen() {
         triggerOnce: true,
         threshold: 1,
     });
-    const HandleClick = (e) => {
-        e.preventDefault();
-    };
+
 
     return (
         <Container ref={ref} className={`element ${inView ? 'fadeIn' : 'hidden'} d-flex flex-column align-items-center`} >

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Button } from 'react-bootstrap'
+import { Button, Col, Row } from 'react-bootstrap'
 import './App.css'
 import 'animate.css'
 import Image from './components/ImageComponent'
@@ -20,24 +20,26 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <div name="HomeSection" className="d-flex vh-100 align-items-center justify-content-center" >
-        <FirstScreenText />
-      </div>
-      <div className='ImageSection' name="KuvaSection">
-        <Image src={testimg} title={"Full stack App"} text={"Reddit clone, MERN stack, hosted in AWS"} />
-      </div>
-      <div name="VideoSection">
-        <Video src={video2} name="VideoSection" />
-      </div>
-      <div className='EMTSection'>
-        <Image src={img} title={"Python Scripting project"} text={"Scrapy library is used"} />
-      </div>
-      <div name="ContactSection" className="d-flex vh-100 align-items-center justify-content-center">
-        <Container>
-          <Contact />
-        </Container>
-      </div>
+    
+        <Navbar/>
+        <Col className='mt-5'> 
+          <Col name="HomeSection" className="vh-100-xl pt-sm-5 pb-sm-5 mt-5 justify-content-center align-items-center" >
+            <FirstScreenText />
+          </Col>
+          <Col className='ImageSection pt-5 vh-100-xl ' name="KuvaSection">
+            <Image src={testimg} title={"Full stack App"} text={"Reddit clone, MERN stack, hosted in AWS"} />
+          </Col>
+          <Col name="VideoSection" className="pt-5 ">
+            <Video src={video2} name="VideoSection" />
+          </Col>
+          <Col className='EMTSection pt-5 vh-100-xl'>
+            <Image src={img} title={"Python Scripting project"} text={"Scrapy library is used"} />
+          </Col>
+          <Col name="ContactSection" className="pt-5 vh-100-xl">
+              <Contact />
+          </Col>
+        </Col>
+      
     </>
   )
 }
