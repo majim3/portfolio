@@ -58,7 +58,7 @@ section {
   background-color: #f0f0f0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1480px) {
   .vh-100-xl {
     height: 100vh !important;
   }

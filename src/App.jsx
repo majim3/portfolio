@@ -26,7 +26,7 @@ function App() {
           <Col name="HomeSection" className="vh-100-xl pt-sm-5 pb-sm-5 mt-5 justify-content-center align-items-center" >
             <FirstScreenText />
           </Col>
-          <Col className='ImageSection pt-5 vh-100-xl ' name="KuvaSection">
+          <Col className='ImageSection pt-5 vh-100-img ' name="KuvaSection">
             <Image src={testimg} title={"Full stack App"} text={"Reddit clone, MERN stack, hosted in AWS"} />
           </Col>
           <Col name="VideoSection" className="pt-5 ">

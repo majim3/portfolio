@@ -15,6 +15,9 @@
   opacity: 1;
   transition: opacity 5s ease-in-out;
 }
+.custom{
+  padding-left: 0px;
+}
 
 .stretched-image{
   height: 500px;
@@ -37,6 +40,6 @@
 @media (max-width: 522px) {
   .type-animation-large {
     height: 200px;
-    width: 400px;
+    width: 300px;
   }
 }

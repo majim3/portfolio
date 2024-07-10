@@ -1,0 +1,87 @@
+
+
+.image-container {
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .images {
+    display: block;
+    width: 100%;
+    /* Ensures image fills its container */
+    height: auto;
+    /* Maintains aspect ratio */
+    object-fit: cover;
+  }
+  
+  .Content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .image-container:hover .Content {
+    opacity: 1;
+  }
+  
+  .image-container:hover .image {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
+      0 0 0 8px rgba(255, 255, 255, 0.2);
+  }
+  
+  .Content h1,
+  .Content p {
+    margin: 0;
+    padding-top: 10px;
+  }
+  
+  
+  @media (max-width: 767px) {
+  
+    .Content h1,
+    .Content p {
+      margin: 0;
+      padding-top: 10px;
+    }
+  
+    .image-container {
+      position: relative;
+      height: auto;
+      width: auto;
+      overflow: hidden;
+    }
+  }
+  
+  @media (max-width: 575px) {
+  
+    .Content h1,
+    .Content p {
+      margin: 0;
+      padding-top: 10px;
+      font-size: 10px;
+    }
+  
+    .image-container {
+      position: relative;
+      height: 150px;
+      width: 150px;
+      overflow: hidden;
+    }
+  }
+
+
+  @media (max-width: 993px) {
+    .container{
+        height: 400;
+        width: 100%;
+    }
+  }

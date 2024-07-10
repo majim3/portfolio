@@ -19,20 +19,19 @@ function ContactScreen() {
 
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 1,
+        threshold: 0.5,
     });
 
 
     return (
-        <Container ref={ref} className={`element ${inView ? 'fadeIn' : 'hidden'} d-flex flex-column align-items-center`} >
-            <Stack direction='horizontal' gap={4} className='justify-content-center'>
-
-                <Container className="mt-4 d-flex justify-content-center custom-container">
-                    <Card className="p-4">
+        <Container ref={ref} className={`element ${inView ? 'fadeIn' : 'hidden'} d-flex justify-content-center align-items-center`} >
+            <Row   className=' d-flex justify-content-center align-items-center'>
+                <Col sm={6} xs={12} className="mt-4 d-flex justify-content-center  custom-container p-4">
+                    <Card >
                         <Card.Body className="text-center">
-                            <Row className="justify-content-center my-3">
+                            <Row>
 
-                                <Col xs="auto">
+                                <Col md={3}>
                                     <a
                                         href="#"
                                         className="icon-link"
@@ -40,6 +39,8 @@ function ContactScreen() {
                                         rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-2" />
                                     </a>
+                                </Col>
+                                <Col md={3}>
                                     <a
                                         href="#"
                                         className="icon-link"
@@ -47,6 +48,8 @@ function ContactScreen() {
                                         rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={faYoutube} size="2x" className="mx-2" />
                                     </a>
+                                </Col>
+                                <Col md={3}>
                                     <a
                                         href="#"
                                         className="icon-link"
@@ -54,7 +57,8 @@ function ContactScreen() {
                                         rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={faInstagram} size="2x" className="mx-2" />
                                     </a>
-
+                                </Col>
+                                <Col md={3}>
                                     <a
                                         href="#"
                                         className="icon-link"
@@ -62,9 +66,10 @@ function ContactScreen() {
                                         rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={faGithub} size="2x" className="mx-2" />
                                     </a>
-
-
                                 </Col>
+
+
+
                             </Row>
                             <Card.Text className="my-2">puh</Card.Text>
                             <Card.Text className="my-2">Sposti</Card.Text>
@@ -72,76 +77,78 @@ function ContactScreen() {
 
                         </Card.Body>
 
-                    </Card>
-                </Container>
+                    </Card >
+                </Col >
 
-                <Form
-                    onSubmit={onSubmit}
-                    action='https://formsubmit.co/f2729bf9f8a855538815e433d4cf5608'
-                    method="POST"
-                >
-                    <h3>Contact me</h3>
+                <Col sm={6} xs={12} className='pt-5 custom-contact' >
+                    <Form
+                        onSubmit={onSubmit}
+                        action='https://formsubmit.co/f2729bf9f8a855538815e433d4cf5608'
+                        method="POST"
+                    >
+                        <h3 className=''>Contact me</h3>
 
-                    <Form.Group className="mb-2" controlId="formBasicName">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" placeholder="Name"
-                            {...register("name", {
-                                required: true,
-                                maxLength: 100,
+                        <Form.Group className='mt-2 ' controlId="formBasicName">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control type="text" placeholder="Name"
+                                {...register("name", {
+                                    required: true,
+                                    maxLength: 100,
 
-                            })}
-                        />
+                                })}
+                            />
 
-                    </Form.Group>
+                        </Form.Group>
 
-                    {errors.name && (
-                        <p className='text-primary'>
-                            {errors.name.type === 'required' && 'This field is required'}
-                            {errors.name.type === 'maxLength' && 'Max length is 100 char.'}
-                        </p>
-                    )}
+                        {errors.name && (
+                            <p className='text-primary'>
+                                {errors.name.type === 'required' && 'This field is required'}
+                                {errors.name.type === 'maxLength' && 'Max length is 100 char.'}
+                            </p>
+                        )}
 
-                    <Form.Group className="mb-2" controlId="formBasicEmail">
-                        <Form.Label >Email</Form.Label>
-                        <Form.Control type="text" placeholder="Email"
-                            {...register("email", {
-                                required: true,
-                                pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
+                        <Form.Group className='mt-3' controlId="formBasicEmail">
+                            <Form.Label >Email</Form.Label>
+                            <Form.Control type="text" placeholder="Email"
+                                {...register("email", {
+                                    required: true,
+                                    pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
 
-                            })}
-                        />
+                                })}
+                            />
 
-                    </Form.Group>
-                    {errors.email && (
-                        <p className='text-primary'>
-                            {errors.email.type === 'required' && 'This field is required'}
-                            {errors.email.type === 'pattern' && 'Invalid email address.'}
-                        </p>
-                    )}
+                        </Form.Group>
+                        {errors.email && (
+                            <p className='text-primary'>
+                                {errors.email.type === 'required' && 'This field is required'}
+                                {errors.email.type === 'pattern' && 'Invalid email address.'}
+                            </p>
+                        )}
 
-                    <Form.Group className="mb-2" controlId="formBasicMessage">
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control as="textarea" placeholder="Message" rows="4" cols="50"
+                        <Form.Group className='mt-3' controlId="formBasicMessage">
+                            <Form.Label>Message</Form.Label>
+                            <Form.Control as="textarea" placeholder="Message" rows="4" cols="50"
 
-                            {...register("Message", {
-                                required: true,
-                                maxLength: 1,
-                            })} />
+                                {...register("Message", {
+                                    required: true,
+                                    maxLength: 1,
+                                })} />
 
 
-                    </Form.Group>
-                    {errors.Message && (
-                        <p className='text-primary'>
-                            {errors.Message.type === 'required' && 'This field is required'}
-                            {errors.Message.type === 'maxLength' && 'too long'}
-                        </p>
-                    )}
+                        </Form.Group>
+                        {errors.Message && (
+                            <p className='text-primary'>
+                                {errors.Message.type === 'required' && 'This field is required'}
+                                {errors.Message.type === 'maxLength' && 'too long'}
+                            </p>
+                        )}
 
-                    <Button type="submit">Submit</Button>
-                </Form>
+                        <Button className='mt-5' type="submit">Submit</Button>
+                    </Form>
+                </Col>
 
-            </Stack>
-        </Container>
+            </Row >
+        </Container >
     );
 }
 

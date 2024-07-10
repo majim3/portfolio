@@ -68,7 +68,7 @@ function Navibar() {
                 to='ContactSection'
                 spy={true}
                 duration={1}
-                offset={-60}
+                offset={-70}
                 smooth={true}
               >
                 contact

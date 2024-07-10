@@ -47,10 +47,10 @@ function FirstScreenText() {
                         <Typewriter
                             onInit={(typewriter) => {
                                 typewriter
-                                    .typeString('<span style="size: 3px" >I am <span style="color: cyan;">Student</span> </span>')
+                                    .typeString('<span style="size: 3px" >I am <stong>Studedadadawdawdnt</strong> </span>')
                                     .pauseFor(1000)
-                                    .deleteChars(7) 
-                                    .typeString('<span style="color: cyan;"> future It-enthusiast</span>')
+                                    .deleteChars(8) 
+                                    .typeString('<span style="color: cyan;">future It-enthusiast</span>')
                                     .pauseFor(1000)
                                     .deleteChars(20) 
                                     .typeString('<span style="color: cyan;">problem solver</span>')
@@ -81,11 +81,11 @@ function FirstScreenText() {
                         </Button>
                     </Col>
 
-                    <Col className="mt-3  mt-4" >
+                    <Col className="mt-3  mt-4 d-none d-md-block" >
                         <h2>About</h2>
                     </Col>
 
-                    <Col className=" ">
+                    <Col className=" d-none d-md-block ">
                         <TypeAnimation
                             sequence={[
                                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -97,7 +97,7 @@ function FirstScreenText() {
                     </Col>
                 </Col>
 
-                <Col xl={5} sm={12} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} mt-5 mt-sm-3  mb-5`}>
+                <Col xl={5} sm={12} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom mt-5 mt-sm-3  mb-5`}>
                     <Image src={catImage} rounded className="stretched-image" />
                 </Col>
             </Row>

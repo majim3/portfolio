@@ -1,17 +1,19 @@
+import { Col, Container } from 'react-bootstrap'
 import '../App.css'
+import React from 'react'
 
 function VideoComponent({ src }) {
 
   return (
 
-    <div>
-      <section>
+    <Container>
+      <Col md={12} >
         <video className='video-container' autoPlay muted loop>
           <source src={src} type="video/mp4" />
           Your browser does not support the video tag
         </video>
-      </section>
-    </div>
+      </Col>
+    </Container>
 
   )
 }
