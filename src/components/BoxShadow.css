@@ -10,9 +10,7 @@
   .images {
     display: block;
     width: 100%;
-    /* Ensures image fills its container */
     height: auto;
-    /* Maintains aspect ratio */
     object-fit: cover;
   }
   
@@ -25,7 +23,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 1s ease;
   }
   
   .image-container:hover .Content {
@@ -34,6 +32,7 @@
   
   .image-container:hover .image {
     transform: scale(1.05);
+    transition: transform 1s ease;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
       0 0 0 8px rgba(255, 255, 255, 0.2);
   }
@@ -42,8 +41,12 @@
   .Content p {
     margin: 0;
     padding-top: 10px;
+    font-size: 15px;
   }
   
+  .Content p {
+    font-size: 10px;
+  }
   
   @media (max-width: 767px) {
   

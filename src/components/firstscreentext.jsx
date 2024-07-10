@@ -3,7 +3,7 @@ import './firstscreentext.css'
 import { Button, Row } from 'react-bootstrap'
 import { Container, Col, Image } from 'react-bootstrap'
 import { useInView } from 'react-intersection-observer';
-import catImage from '../assets/cat.jpg';
+import catImage from '../assets/lol.jpg';
 import { Link } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
 import { TypeAnimation } from 'react-type-animation';
@@ -49,10 +49,10 @@ function FirstScreenText() {
                                 typewriter
                                     .typeString('<span style="size: 3px" >I am <stong>Studedadadawdawdnt</strong> </span>')
                                     .pauseFor(1000)
-                                    .deleteChars(8) 
+                                    .deleteChars(8)
                                     .typeString('<span style="color: cyan;">future It-enthusiast</span>')
                                     .pauseFor(1000)
-                                    .deleteChars(20) 
+                                    .deleteChars(20)
                                     .typeString('<span style="color: cyan;">problem solver</span>')
                                     .pauseFor(1000)
                                     .deleteAll(50)
@@ -97,8 +97,18 @@ function FirstScreenText() {
                     </Col>
                 </Col>
 
-                <Col xl={5} sm={12} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom mt-5 mt-sm-3  mb-5`}>
-                    <Image src={catImage} rounded className="stretched-image" />
+                <Col xl={6} sm={12} xs={12} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom  pt-md-5 mt-md-5 mt-sm-5  mb-5`}>
+                    <Container  className=' container p5 mt-3 d-flex flex-column justify-content-center align-items-center text-center'>
+                        <div className="image-containerFirst">
+                        <Image src={catImage} rounded className="stretched-image" />
+
+                        <div className="Content d-flex flex-column justify-content-center align-items-center text-center">
+                            <h1>lorem jotain</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        </div>
+                    </Container>
+
                 </Col>
             </Row>
         </Container>
