@@ -37,6 +37,9 @@
   height: 200px;
   width: 300px;
 }
+.Content{
+  visibility: hidden;
+}
 
 @media (max-width: 1200px) {
   .stretched-image {
@@ -56,6 +59,7 @@
   }
  
   .Content {
+    visibility: visible;
     position: absolute;
     top: 0;
     left: 0;
