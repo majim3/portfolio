@@ -22,18 +22,18 @@ function ImageComponent({ src, title, text }) {
             </div>
           </div>
         </Col>
-        <Col md={6} lg={4} className='containerImages mb-4'>
+        <Col md={6} lg={6}  className='mb-4'>
           <Row>
-            <Col sm={6} xs={6} className='p5 mt-3'>
+            <Col sm={6} xs={6} className='containerImages mt-3'>
               <BoxShadowComp src={src} />
             </Col>
-            <Col sm={6} xs={6} className='p5 mt-3'>
+            <Col sm={6} xs={6} className='containerImages mt-3'>
               <BoxShadowComp src={src} />
             </Col>
-            <Col sm={6} xs={6} className='p5 mt-3'>
+            <Col sm={6} xs={6} className='containerImages mt-3'>
               <BoxShadowComp src={src} />
             </Col>
-            <Col sm={6} xs={6} className='p5 mt-3'>
+            <Col sm={6} xs={6} className='containerImages mt-3'>
               <BoxShadowComp src={src} />
             </Col>
           </Row>

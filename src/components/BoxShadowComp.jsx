@@ -9,7 +9,7 @@ function BoxShadowComp({src}) {
 
 
     return (
-        <Container className=' container-shadow p5 mt-3'>
+        <Container className=' image-container-Shadow mt-3'>
             <div className="image-container-Shadow">
                 <img src={src} alt="image description" className="image-shadow" />
                 <div className="Content-Shadow d-flex flex-column justify-content-center align-items-center text-center">
