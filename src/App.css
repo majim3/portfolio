@@ -1,5 +1,9 @@
 .btn-primary {
-  background-color: #35393C ;
+  background-color: #1D3354;
+}
+
+.btn-secondary {
+  background-color: #D64045;
 }
 
 section {
@@ -9,6 +13,10 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 50px;
+}
+
+body {
+  background-color: ivory;
 }
 
 
