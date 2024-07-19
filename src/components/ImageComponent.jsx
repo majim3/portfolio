@@ -5,7 +5,7 @@ import { Row, Col, Container } from 'react-bootstrap'
 import BoxShadowComp from './BoxShadowComp.jsx'
 import catImage from '../assets/cat.jpg';
 import { useInView } from 'react-intersection-observer'
-import './ImageComponent.css'
+import './imageComponent.css'
 
 function ImageComponent({ src, title, text }) {
 
