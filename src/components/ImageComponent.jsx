@@ -1,11 +1,11 @@
 import React from 'react'
 import 'animate.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './imageComponent.css'
 import { Row, Col, Container } from 'react-bootstrap'
 import BoxShadowComp from './BoxShadowComp.jsx'
 import catImage from '../assets/cat.jpg';
 import { useInView } from 'react-intersection-observer'
+import './ImageComponent.css'
 
 function ImageComponent({ src, title, text }) {
 
