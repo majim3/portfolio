@@ -5,10 +5,16 @@ import './imageComponent.css'
 import { Row, Col, Container } from 'react-bootstrap'
 import BoxShadowComp from './BoxShadowComp.jsx'
 import catImage from '../assets/cat.jpg';
-
+import { useInView } from 'react-intersection-observer'
 
 function ImageComponent({ src, title, text }) {
 
+
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  })
 
   return (
     <Container>
