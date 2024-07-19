@@ -19,8 +19,7 @@ function ImageComponent({ src, title, text }) {
   return (
     <Container>
       {/* Desktop Layout */}
-      <section ref={ref} className={`element ${inView ? 'animate__animated animate__fadeIn' : 'hidden'} `}>
-        <Row>
+        <Row ref={ref} className={`element ${inView ? 'animate__animated animate__fadeIn' : 'hidden'} `}>
           <Col sm={6} lg={{ order: 'last' }} md={{ order: 'first' }}>
             <div className='text-container half'>
               <div>
@@ -46,7 +45,6 @@ function ImageComponent({ src, title, text }) {
             </Row>
           </Col>
         </Row>
-      </section>
     </Container>
   )
 }
