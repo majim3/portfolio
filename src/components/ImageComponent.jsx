@@ -16,6 +16,12 @@ function ImageComponent({ src, title, text }) {
     threshold: 0.5,
   })
 
+  const { ref2, inView2 } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  })
+
+  const img = 'https://media.istockphoto.com/photos/test-picture-id996396804?k=20&m=996396804&s=170667a&w=0&h=huj1Gbf6hCATkhOX8EIXekv9eBWZS8DT-RfSh2sIm-0='
   return (
     <Container>
       {/* Desktop Layout */}
@@ -29,10 +35,11 @@ function ImageComponent({ src, title, text }) {
             </div>
           </Col>
           <Col md={6} lg={6} className='mb-4'>
-            <Row>
-              <Col sm={6} xs={6} className='containerImages mt-3'>
-                <BoxShadowComp src={src} />
+            <Row ref={ref2} className={`element ${inView2 ? 'animate__animated animate__fadeIn' : 'hidden'}`} >
+              <Col sm={6} xs={6}  className='containerImages mt-3'>
+                <BoxShadowComp src={img} />
               </Col>
+
               <Col sm={6} xs={6} className='containerImages mt-3'>
                 <BoxShadowComp src={src} />
               </Col>

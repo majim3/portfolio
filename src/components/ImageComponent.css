@@ -2,6 +2,7 @@
   opacity: 0;
 }
 
+
 .half {
   flex: 1;
   border: 1px;
@@ -9,6 +10,10 @@
   box-sizing: border-box;
 }
 
+.fadeIn {
+  opacity: 1;
+  transition: opacity 5s ease-in-out;
+}
 
 .image-container .half {
   width: 100%;
