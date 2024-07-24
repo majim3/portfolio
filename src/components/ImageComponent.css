@@ -12,7 +12,21 @@
 
 .fadeIn {
   opacity: 1;
-  transition: opacity 5s ease-in-out;
+  transition: opacity 2s ease-in-out;
+}
+
+.fadeIn2 {
+  opacity: 1;
+  transition: opacity 4s ease-in-out;
+}
+.fadeIn3 {
+  opacity: 1;
+  transition: opacity 7s ease-in-out;
+}
+
+.fadeIn4 {
+  opacity: 1;
+  transition: opacity 9s ease-in-out;
 }
 
 .image-container .half {
