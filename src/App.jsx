@@ -26,16 +26,18 @@ function App() {
           <Col name="HomeSection" className="vh-100-xl pt-sm-5 pb-sm-5 mt-5 justify-content-center align-items-center" >
             <FirstScreenText />
           </Col>
-          <Col className='ImageSection pt-5 vh-100-xl ' name="KuvaSection">
-            <Image src={testimg} src2={testimg} src3={img} src4={testimg}
-            title={"Full stack App"} text={"Reddit clone, MERN stack, hosted in AWS"} />
-          </Col>
-          <Col name="VideoSection" className="pt-5 ">
-            <Video src={video2} name="VideoSection" />
-          </Col>
-          <Col className='EMTSection pt-5 vh-100-xl'>
-            <Image src={img} src2={testimg} src3={img} src4={testimg} 
-            title={"Python Scripting project"} text={"Scrapy library is used"} />
+          <Col name="KuvaSection">
+            <Col className='ImageSection pt-5 vh-100-xl ' >
+              <Image src={testimg} src2={testimg} src3={img} src4={testimg}
+              title={"Full stack App"} text={"Reddit clone, MERN stack, hosted in AWS"} />
+            </Col>
+            <Col  className="pt-5 pb-5 ">
+              <Video src={video2} />
+            </Col>
+            <Col  className='EMTSection pt-5 vh-100-xl'>
+              <Image src={img} src2={testimg} src3={img} src4={testimg} 
+              title={"Python Scripting project"} text={"Scrapy library is used"} />
+            </Col>
           </Col>
           <Col name="ContactSection" className="pt-5 vh-100-xl">
               <Contact />

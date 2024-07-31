@@ -40,20 +40,20 @@ function FirstScreenText() {
             <Row className=" text-center  ">
                 <Col ref={ref1} className={`element ${inView1 ? 'fadeIn' : 'hidden'} d-flex  flex-column align-items-center `}>
                     <Col md={6} className="mt-5">
-                        <h1>steophan Gong</h1>
+                        <h1>Leo Gong</h1>
                     </Col>
 
                     <Col md={6} className="mt-sm-5 mt-3">
                         <Typewriter
                             onInit={(typewriter) => {
                                 typewriter
-                                    .typeString('<span style="size: 3px" >I am <stong>Studedadadawdawdnt</strong> </span>')
+                                    .typeString('<span>I am <strong>Developer</strong> </span>')
                                     .pauseFor(1000)
-                                    .deleteChars(8)
-                                    .typeString('<span style="color: cyan;">future It-enthusiast</span>')
+                                    .deleteChars(10)
+                                    .typeString('<span><strong>Problem solver</strong></span>')
                                     .pauseFor(1000)
-                                    .deleteChars(20)
-                                    .typeString('<span style="color: cyan;">problem solver</span>')
+                                    .deleteChars(14)
+                                    .typeString('<span> <strong>Student</strong></span>')
                                     .pauseFor(1000)
                                     .deleteAll(50)
                                     .start();
@@ -86,14 +86,7 @@ function FirstScreenText() {
                     </Col>
 
                     <Col className=" d-none d-md-block ">
-                        <TypeAnimation
-                            sequence={[
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                            ]}
-                            speed={100}
-                            style={{ display: 'inline-block' }}
-                            className="type-animation-large"
-                        />
+                       <p className='InfoText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </Col>
                 </Col>
 

@@ -3,7 +3,7 @@ import { Button, Form, Row, Stack, Container, Col, Card, CardBody } from 'react-
 import { useForm } from 'react-hook-form';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './contactscreen.css'
 import { useInView } from 'react-intersection-observer';
 
@@ -29,11 +29,11 @@ function ContactScreen() {
                 <Col sm={6} xs={12} className="mt-4 d-flex justify-content-center  custom-container p-4">
                     <Card >
                         <Card.Body className="text-center">
-                            <Row>
+                            <Row className='mt-3'>
 
                                 <Col md={3}>
                                     <a
-                                        href="#"
+                                        href="https://www.linkedin.com/in/leo-gong-585538155/"
                                         className="icon-link"
                                         target="_blank"
                                         rel="noopener noreferrer">
@@ -42,16 +42,16 @@ function ContactScreen() {
                                 </Col>
                                 <Col md={3}>
                                     <a
-                                        href="#"
+                                        href="https://www.facebook.com/leo.go.10004"
                                         className="icon-link"
                                         target="_blank"
                                         rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faYoutube} size="2x" className="mx-2" />
+                                        <FontAwesomeIcon icon={faFacebook} size="2x" className="mx-2" />
                                     </a>
                                 </Col>
                                 <Col md={3}>
                                     <a
-                                        href="#"
+                                        href="https://www.instagram.com/Leoryoo/"
                                         className="icon-link"
                                         target="_blank"
                                         rel="noopener noreferrer">
@@ -60,7 +60,7 @@ function ContactScreen() {
                                 </Col>
                                 <Col md={3}>
                                     <a
-                                        href="#"
+                                        href="https://github.com/majim3"
                                         className="icon-link"
                                         target="_blank"
                                         rel="noopener noreferrer">
@@ -71,9 +71,9 @@ function ContactScreen() {
 
 
                             </Row>
-                            <Card.Text className="my-2">puh</Card.Text>
-                            <Card.Text className="my-2">Sposti</Card.Text>
-                            <Button variant="dark" className="mt-3">CV</Button>
+                            <Card.Text className="mt-4"><a href="tel:+358 408278956" variant="dark" className='call-button' >Puh: +358 408278956</a></Card.Text>
+                            <Card.Text className="mt-3"><a href={`mailto:LeoGong3@gmail.com`} className='call-button'>LeoGong3@gmail.com</a></Card.Text>
+                            <Button variant="dark" className="mt-3" >CV</Button>
 
                         </Card.Body>
 

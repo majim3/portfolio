@@ -2,14 +2,6 @@
   background-color: #35393C;
 }
 
-section {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px;
-}
 
 .half {
   flex: 1;

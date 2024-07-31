@@ -45,20 +45,7 @@ function Navibar() {
                 duration={1}
                 offset={-60}
                 smooth={true}>
-                kuva
-              </Link>
-            </Nav.Link>
-            <Nav.Link className='p-2'>
-              <Link
-                activeClass="active"
-                className="VideoSection link-custom"
-                to="VideoSection"
-                spy={true}
-                smooth={true}
-                offset={40}
-                duration={1}
-              >
-                video
+                Project
               </Link>
             </Nav.Link>
             <Nav.Link className='p-2'>

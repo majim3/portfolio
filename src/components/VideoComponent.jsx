@@ -1,5 +1,5 @@
 
-import { Col, Container } from 'react-bootstrap'
+import { Col, Container,Row } from 'react-bootstrap'
 import '../App.css'
 import React from 'react'
 import '../App.css'
@@ -18,15 +18,25 @@ function VideoComponent({ src }) {
   return (
 
 
-    <Container>
-      <Col md={12} >
-      <section ref={ref} className={`element ${inView ? 'animate__animated animate__fadeIn' : 'hidden'} `}>
-        <video className='video-container' autoPlay muted loop>
-          <source src={src} type="video/mp4" />
-          Your browser does not support the video tag
-        </video>
-      </section>
-      </Col>
+    <Container className=''>
+      <Row md={12} >
+        <Col sm={6} className='d-none d-lg-block'>
+              <div className='text-container half '>
+                <div>
+                  <h2>Project</h2>
+                  <p>Loremipsum</p>
+                </div>
+              </div>
+            </Col>
+        <Col sm={6}>
+        <section ref={ref} className={`element ${inView ? 'animate__animated animate__fadeIn' : 'hidden'} `}>
+          <video className='video-container d-none d-md-block' autoPlay muted loop>
+            <source src={src} type="video/mp4" />
+            Your browser does not support the video tag
+          </video>
+        </section>
+        </Col>
+      </Row>
     </Container>
 
   )
