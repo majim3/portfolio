@@ -40,7 +40,7 @@ function FirstScreenText() {
             <Row className=" text-center  ">
                 <Col ref={ref1} className={`element ${inView1 ? 'fadeIn' : 'hidden'} d-flex  flex-column align-items-center `}>
                     <Col md={6} className="mt-5">
-                        <h1>Leo Gong</h1>
+                        <h1> Gong</h1>
                     </Col>
 
                     <Col md={6} className="mt-sm-5 mt-3">
