@@ -1,0 +1,54 @@
+.resume-section {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+
+.resume-section::before {
+    content: '';
+    position: absolute;
+    left: 25px;  /* Adjust left to center the line */
+    top: 10px;  /* Add some padding from the top */
+    bottom: 10px;  /* Add some padding from the bottom */
+    width: 2px;
+    background-color: #007bff;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #007bff;
+    border-radius: 50%;
+    position: absolute;
+    left: 26px;  /* Adjust left to center the circle */
+    top: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.resume-item {
+    margin-bottom: 20px;
+}
+
+.resume-date {
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;  /* Add some spacing below the date */
+}
+
+.summary-section, .experience-section, .education-section {
+    padding-left: 40px;  /* Ensure padding matches the left padding of the section */
+}
+
+h2, h5 {
+    margin-bottom: 10px;  /* Add spacing below headings */
+}
+
+h5 {
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 20px;
+}

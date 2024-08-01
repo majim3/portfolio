@@ -1,21 +1,47 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Row, Stack, Container, Col, Card, CardBody } from 'react-bootstrap';
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
+import useWeb3Forms from "@web3forms/react";
+import { useState, useEffect } from "react";
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './contactscreen.css'
 import { useInView } from 'react-intersection-observer';
+import Swal from 'sweetalert2'
 
 function ContactScreen() {
-    const { register, trigger, formState: { errors } } = useForm();
+    
+    const {register, reset, handleSubmit, formState: { errors }} = useForm();
 
-    const onSubmit = async (e) => {
-        const isValid = await trigger();
-        if (!isValid) {
-            e.preventDefault();
-        }
-    };
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [result, setResult] = useState(null);
+  
+    const accessKey = "84ae6c65-57ac-431e-ba14-ec9a1c0378d3";
+  
+    const { submit: onSubmit } = useWeb3Forms({
+      access_key: accessKey,
+      settings: {
+        from_name: "Acme Inc",
+        subject: "New Contact Message from your Website",
+        // ... other settings
+      },
+      onSuccess: (msg, data) => {
+        Swal.fire({
+            title: "success",
+            text: "Thanks for the email",
+            icon: "success"
+          });
+        reset();
+      },
+      onError: (msg, data) => {
+        Swal.fire({
+            title: "Error",
+            text: "Something went wrong",
+            icon: "error"
+          });
+      },
+    });
 
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -82,9 +108,7 @@ function ContactScreen() {
 
                 <Col sm={6} xs={12} className='pt-5 custom-contact' >
                     <Form
-                        onSubmit={onSubmit}
-                        action='https://formsubmit.co/f2729bf9f8a855538815e433d4cf5608'
-                        method="POST"
+                        onSubmit={handleSubmit(onSubmit)}
                     >
                         <h3 className=''>Contact me</h3>
 
