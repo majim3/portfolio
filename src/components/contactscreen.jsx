@@ -17,14 +17,13 @@ function ContactScreen() {
     const [isSuccess, setIsSuccess] = useState(false);
     const [result, setResult] = useState(null);
   
-    const accessKey = "84ae6c65-57ac-431e-ba14-ec9a1c0378d3";
+    const accessKey = "YOUR API KEY FROM HERE https://web3forms.com";
   
     const { submit: onSubmit } = useWeb3Forms({
       access_key: accessKey,
       settings: {
         from_name: "Acme Inc",
         subject: "New Contact Message from your Website",
-        // ... other settings
       },
       onSuccess: (msg, data) => {
         Swal.fire({
@@ -155,7 +154,7 @@ function ContactScreen() {
 
                                 {...register("Message", {
                                     required: true,
-                                    maxLength: 1,
+                                    maxLength: 5000,
                                 })} />
 
 

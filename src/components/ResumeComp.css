@@ -7,9 +7,9 @@
 .resume-section::before {
     content: '';
     position: absolute;
-    left: 25px;  /* Adjust left to center the line */
-    top: 10px;  /* Add some padding from the top */
-    bottom: 10px;  /* Add some padding from the bottom */
+    left: 25px;  
+    top: 10px;  
+    bottom: 10px;  
     width: 2px;
     background-color: #007bff;
 }
@@ -20,7 +20,7 @@
     background-color: #007bff;
     border-radius: 50%;
     position: absolute;
-    left: 26px;  /* Adjust left to center the circle */
+    left: 26px; 
     top: 10px;
     transform: translate(-50%, -50%);
 }
@@ -34,15 +34,15 @@
     padding: 5px 10px;
     border-radius: 5px;
     display: inline-block;
-    margin-bottom: 10px;  /* Add some spacing below the date */
+    margin-bottom: 10px;  
 }
 
 .summary-section, .experience-section, .education-section {
-    padding-left: 40px;  /* Ensure padding matches the left padding of the section */
+    padding-left: 40px; 
 }
 
 h2, h5 {
-    margin-bottom: 10px;  /* Add spacing below headings */
+    margin-bottom: 10px;  
 }
 
 h5 {
