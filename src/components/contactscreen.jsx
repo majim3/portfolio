@@ -3,43 +3,71 @@ import { Button, Form, Row, Stack, Container, Col, Card, CardBody } from 'react-
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 import { useState, useEffect } from "react";
-import React from 'react';
+import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './contactscreen.css'
 import { useInView } from 'react-intersection-observer';
 import Swal from 'sweetalert2'
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 function ContactScreen() {
-    
-    const {register, reset, handleSubmit, formState: { errors }} = useForm();
+
+    const { register, reset, handleSubmit, formState: { errors } } = useForm();
+    const [captchaToken, setCaptchaToken] = useState(null);
+    const captchaRef = useRef(null);
+
+    const onHCaptchaChange = (token) => {
+        setCaptchaToken(token);
+        setValue('Captcha', token, { shouldValidate: true });
+    };
+
+    const onHCaptchaExpire = () => {
+        setCaptchaToken(null);
+    };
 
     const [isSuccess, setIsSuccess] = useState(false);
     const [result, setResult] = useState(null);
-  
-    const accessKey = "your api key here";
-    const { submit: onSubmit } = useWeb3Forms({
-      access_key: accessKey,
-      settings: {
-        from_name: "Acme Inc",
-        subject: "New Contact Message from your Website",
-      },
-      onSuccess: (msg, data) => {
-        Swal.fire({
-            title: "success",
-            text: "Thanks for the email",
-            icon: "success"
-          });
-        reset();
-      },
-      onError: (msg, data) => {
-        Swal.fire({
-            title: "Error",
-            text: "Something went wrong",
-            icon: "error"
-          });
-      },
+
+    const accessKey = "84ae6c65-57ac-431e-ba14-ec9a1c0378d3";
+    const { submit: web3Submit } = useWeb3Forms({
+
+        access_key: accessKey,
+        settings: {
+            from_name: "Acme Inc",
+            subject: "New Contact Message from your Website",
+        },
+        onSuccess: (msg, data) => {
+            Swal.fire({
+                title: "success",
+                text: "Thanks for the email",
+                icon: "success"
+            });
+            reset();
+            setCaptchaToken(null);
+            captchaRef.current.resetCaptcha();
+        },
+        onError: (msg, data) => {
+            Swal.fire({
+                title: "Error",
+                text: "Something went wrong",
+                icon: "error"
+            });
+        },
     });
+
+    const onSubmit = data => {
+        if (!captchaToken) {
+            alert('Please complete the captcha');
+            return;
+        }
+
+        // Add captchaToken to data
+        data['h-captcha-response'] = captchaToken;
+
+        // Call web3Forms submit
+        web3Submit(data);
+    };
 
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -49,7 +77,7 @@ function ContactScreen() {
 
     return (
         <Container ref={ref} className={`element ${inView ? 'fadeIn' : 'hidden'} d-flex justify-content-center align-items-center`} >
-            <Row   className=' d-flex justify-content-center align-items-center'>
+            <Row className=' d-flex justify-content-center align-items-center'>
                 <Col sm={6} xs={12} className="mt-4 d-flex justify-content-center  custom-container p-4">
                     <Card >
                         <Card.Body className="text-center">
@@ -164,6 +192,18 @@ function ContactScreen() {
                                 {errors.Message.type === 'maxLength' && 'too long'}
                             </p>
                         )}
+                        <div className='mt-3'>
+                            <HCaptcha
+                                controlId="Captcha"
+                                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                                reCaptchaCompat={false}
+                                onVerify={onHCaptchaChange}
+                                onExpire={onHCaptchaExpire}
+                                ref={captchaRef}
+                            />
+                        </div>
+
+
 
                         <Button className='mt-5' type="submit">Submit</Button>
                     </Form>

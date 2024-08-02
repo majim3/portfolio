@@ -47,7 +47,7 @@
 
 
 
-@media (min-width: 1480px) {
+@media (min-width: 900px) {
   .vh-100-xl {
     height: 100vh !important;
   }
