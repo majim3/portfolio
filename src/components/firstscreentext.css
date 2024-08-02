@@ -25,7 +25,7 @@
   object-fit: cover;
 }
 .InfoText {
-  height: 200px;
+  height: 175px;
   width: 500px;
 }
 .image-containerFirst {
@@ -39,6 +39,22 @@
 }
 .Content{
   visibility: hidden;
+}
+
+.About {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 40px;
+}
+
+.About::before {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 0px;
+  bottom: 0px;
+  width: 2px;
+  background-color: #007bff;
 }
 
 @media (max-width: 1200px) {

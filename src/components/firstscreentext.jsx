@@ -37,7 +37,7 @@ function FirstScreenText() {
 
     return (
         <Container className="justify-content-center pt-5">
-            <Row className=" text-center  ">
+            <Row className="text-center">
                 <Col ref={ref1} className={`element ${inView1 ? 'fadeIn' : 'hidden'} d-flex  flex-column align-items-center `}>
                     <Col md={6} className="mt-5">
                         <h1>Leo Gong</h1>
@@ -85,14 +85,18 @@ function FirstScreenText() {
                         <h2>About</h2>
                     </Col>
 
-                    <Col className=" d-none d-md-block ">
-                        <p className='InfoText'> As a passionate and motivated programmer with a strong desire to
-                            learn, I am seeking a position with a dynamic programming company
-                            where I can apply and expand my current programming knowledge and
-                            skills. I am excited to work alongside experienced developers to learn
-                            and grow in a fast-paced and collaborative environment. My strong
-                            work ethic, attention to detail, and eagerness to learn will make me a
-                            valuable member of your programming team.</p>
+                    <Col className="d-none d-md-block ">
+                        <div className='About'>
+                            <p className='InfoText'>
+                                As a passionate and motivated programmer with a strong desire to
+                                learn, I am seeking a position with a dynamic programming company
+                                where I can apply and expand my current programming knowledge and
+                                skills. I am excited to work alongside experienced developers to learn
+                                and grow in a fast-paced and collaborative environment. My strong
+                                work ethic, attention to detail, and eagerness to learn will make me a
+                                valuable member of your programming team.
+                            </p>
+                        </div>
                     </Col>
                 </Col>
 
@@ -110,13 +114,14 @@ function FirstScreenText() {
                                     and grow in a fast-paced and collaborative environment. My strong
                                     work ethic, attention to detail, and eagerness to learn will make me a
                                     valuable member of your programming team.</p>
+
                             </div>
                         </div>
                     </Container>
 
                 </Col>
             </Row>
-        </Container>
+        </Container >
     );
 };
 
