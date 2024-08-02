@@ -5,7 +5,7 @@ import './BoxShadow.css'
 import 'animate.css'
 
 
-function BoxShadowComp({src}) {
+function BoxShadowComp({src, ShadowBoxTitle, ShadowBoxText}) {
 
 
 
@@ -14,8 +14,8 @@ function BoxShadowComp({src}) {
             <div className="image-container-Shadow">
                     <Image src={src} alt="image description" className="image-shadow animated__animate animate__wobble" />
                     <div className="Content-Shadow d-flex flex-column justify-content-center align-items-center text-center">
-                    <h1>lorem jotain</h1>
-                    <p>ipsum papsum hampsun tatsum</p>
+                    <h1>{ShadowBoxTitle}</h1>
+                    <p>{ShadowBoxText}</p>
                 </div>
             </div>
         </Container>

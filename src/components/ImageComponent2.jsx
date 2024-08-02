@@ -5,32 +5,23 @@ import { Row, Col, Container } from 'react-bootstrap'
 import BoxShadowComp from './BoxShadowComp.jsx'
 import catImage from '../assets/cat.jpg';
 import { useInView } from 'react-intersection-observer'
-import './ImageComponent.css'
+import './ImageComponent2.css'
 
-function ImageComponent({
+function ImageComponent2({
   src,
   src2,
   src3,
   src4,
   title,
   text,
-    ShadowBoxTitle1, ShadowBoxText1
-  , ShadowBoxTitle2, ShadowBoxText2
+   ShadowBoxTitle2, ShadowBoxText2
   , ShadowBoxTitle3, ShadowBoxText3
-  ,Contributors
+  , Contributors
 }) {
 
 
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  })
 
-  const { ref: ref2, inView: inView2 } = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  })
 
   const { ref: ref3, inView: inView3 } = useInView({
     triggerOnce: true,
@@ -56,10 +47,6 @@ function ImageComponent({
         </Col>
         <Col md={6} lg={6} className='mb-4'>
           <Row>
-            <Col sm={12} xs={12} ref={ref} className={`element ${inView ? 'fadeIn' : 'hidden'} containerImages mt-3`}>
-              <BoxShadowComp src={src} ShadowBoxTitle={ShadowBoxTitle1} ShadowBoxText={ShadowBoxText1} />
-            </Col>
-
             <Col sm={6} xs={6} ref={ref3} className={`element ${inView3 ? 'fadeIn3' : 'hidden'} containerImages mt-3`}>
               <BoxShadowComp src={src3} ShadowBoxTitle={ShadowBoxTitle2} ShadowBoxText={ShadowBoxText2} />
             </Col>
@@ -73,5 +60,5 @@ function ImageComponent({
   )
 }
 
-export default ImageComponent
+export default ImageComponent2
 

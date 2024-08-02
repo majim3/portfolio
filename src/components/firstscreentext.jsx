@@ -86,19 +86,31 @@ function FirstScreenText() {
                     </Col>
 
                     <Col className=" d-none d-md-block ">
-                       <p className='InfoText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p className='InfoText'> As a passionate and motivated programmer with a strong desire to
+                            learn, I am seeking a position with a dynamic programming company
+                            where I can apply and expand my current programming knowledge and
+                            skills. I am excited to work alongside experienced developers to learn
+                            and grow in a fast-paced and collaborative environment. My strong
+                            work ethic, attention to detail, and eagerness to learn will make me a
+                            valuable member of your programming team.</p>
                     </Col>
                 </Col>
 
                 <Col xl={6} sm={12} xs={12} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom p5 mt-5  mb-5`}>
-                    <Container  className=' container  d-flex flex-column justify-content-center align-items-center text-center'>
+                    <Container className=' container  d-flex flex-column justify-content-center align-items-center text-center'>
                         <div className="image-containerFirst">
-                        <Image src={catImage} rounded className="stretched-image" />
+                            <Image src={catImage} rounded className="stretched-image" />
 
-                        <div className="Content d-flex flex-column justify-content-center align-items-center text-center">
-                            <h1>lorem jotain</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
+                            <div className="Content d-flex flex-column justify-content-center align-items-center text-center">
+                                <h1>About</h1>
+                                <p> As a passionate and motivated programmer with a strong desire to
+                                    learn, I am seeking a position with a dynamic programming company
+                                    where I can apply and expand my current programming knowledge and
+                                    skills. I am excited to work alongside experienced developers to learn
+                                    and grow in a fast-paced and collaborative environment. My strong
+                                    work ethic, attention to detail, and eagerness to learn will make me a
+                                    valuable member of your programming team.</p>
+                            </div>
                         </div>
                     </Container>
 
