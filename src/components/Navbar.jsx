@@ -39,11 +39,24 @@ function Navibar() {
             <Nav.Link className='p-2'>
               <Link
                 activeClass='active'
+                className="ResumeSection link-custom"
+                to='ResumeSection'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1}
+              >
+                Resume
+              </Link>
+            </Nav.Link>
+            <Nav.Link className='p-2'>
+              <Link
+                activeClass='active'
                 className="KuvaSection link-custom"
                 to='KuvaSection'
                 spy={true}
                 duration={1}
-                offset={-60}
+                offset={-70}
                 smooth={true}>
                 Project
               </Link>

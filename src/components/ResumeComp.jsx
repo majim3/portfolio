@@ -6,7 +6,7 @@ import { Col, Container,Row } from 'react-bootstrap'
 const ResumeComp = () => {
     return (
         <Container className=" mt-5">
-            <Row className="">
+            <Row>
                 <Col xs={12} className="text-center">
                     <h1>Resume</h1>
                     <p>A seasoned Developer with a passion for solutions and robust backend systems.</p>
