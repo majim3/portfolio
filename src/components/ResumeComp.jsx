@@ -66,7 +66,7 @@ const ResumeComp = () => {
                         <div className="circle">
                         </div>
                         <h2>Professional Experience</h2>
-                        <div className="resume-item">
+                        <div className="resume-item mt-5">
                             <h5>SOFTWARE DEVELOPER TRAINEE</h5>
                             <p>Extreme Consulting</p>
                             <p className="resume-date">Apr 2019 - May 2019</p>
@@ -78,7 +78,7 @@ const ResumeComp = () => {
                                     school coursework to real-world problems and challenges.</li>
                             </ul>
                         </div>
-                        <div className="resume-item">
+                        <div className="resume-item mt-5">
                             <h5>SUMMER SIILI, TRAINEE PROGRAM</h5>
                             <p>Siili </p>
                             <p className="resume-date">June 2016 - july 2016 </p>
@@ -90,7 +90,7 @@ const ResumeComp = () => {
                                 issues, utilizing problem-solving skills to find effective solutions.</li>
                             </ul>
                         </div>
-                        <div className="resume-item">
+                        <div className="resume-item mt-5">
                             <h5>JOB LEARNING </h5>
                             <p>Gofore Oyj</p>
                             <p className="resume-date">Oct 2018 - Dec 2018 </p>
@@ -107,18 +107,18 @@ const ResumeComp = () => {
             </Row>
 
             <Row ref={ref4} className={`element ${inView4 ? 'fadeIn3' : 'hidden'} mt-5`}>
-                <div className="col-12">
-                    <div className="resume-section">
+                <Col xs={12}>
+                    <Col className="resume-section">
                         <div className="circle">
                         </div>
                         <h2>Education</h2>
-                        <div className="resume-item">
+                        <Col className="resume-item">
                             <h5>Bachelor of Engineering in Information Technology</h5>
                             <p className="resume-date">2021 - Still Enrolled</p>
                             <p>Metropolia university of applied sciences</p>
-                        </div>
-                    </div>
-                </div>
+                        </Col>
+                    </Col>
+                </Col>
             </Row>
         </Container>
     );

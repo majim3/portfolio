@@ -10,6 +10,7 @@ import './contactscreen.css'
 import { useInView } from 'react-intersection-observer';
 import Swal from 'sweetalert2'
 import HCaptcha from '@hcaptcha/react-hcaptcha';
+import cv from '../assets/cv.pdf'
 
 function ContactScreen() {
 
@@ -26,28 +27,25 @@ function ContactScreen() {
         setCaptchaToken(null);
     };
 
-    const [isSuccess, setIsSuccess] = useState(false);
-    const [result, setResult] = useState(null);
-
-    const accessKey = "add your api key here";
+    const accessKey = "your key here pls";
     const { submit: web3Submit } = useWeb3Forms({
 
         access_key: accessKey,
         settings: {
-            from_name: "Acme Inc",
+            from_name: "Portfolio",
             subject: "New Contact Message from your Website",
         },
-        onSuccess: (msg, data) => {
+        onSuccess: () => {
             Swal.fire({
                 title: "success",
-                text: "Thanks for the email",
+                text: "Thanks for the email i will contact you soon as possible",
                 icon: "success"
             });
             reset();
             setCaptchaToken(null);
             captchaRef.current.resetCaptcha();
         },
-        onError: (msg, data) => {
+        onError: () => {
             Swal.fire({
                 title: "Error",
                 text: "Something went wrong",
@@ -62,10 +60,10 @@ function ContactScreen() {
             return;
         }
 
-        // Add captchaToken to data
+        
         data['h-captcha-response'] = captchaToken;
 
-        // Call web3Forms submit
+        
         web3Submit(data);
     };
 
@@ -73,6 +71,15 @@ function ContactScreen() {
         triggerOnce: true,
         threshold: 0.5,
     });
+
+    const downloadCV = () => {
+        const link = document.createElement('a');
+        link.href = cv;
+        link.download = 'Leo_Gong_CV.pdf'; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
 
 
     return (
@@ -125,7 +132,7 @@ function ContactScreen() {
                             </Row>
                             <Card.Text className="mt-4"><a href="tel:+358 408278956" variant="dark" className='call-button' >Puh: +358 408278956</a></Card.Text>
                             <Card.Text className="mt-3"><a href={`mailto:LeoGong3@gmail.com`} className='call-button'>LeoGong3@gmail.com</a></Card.Text>
-                            <Button variant="dark" className="mt-3" >CV</Button>
+                            <Button variant="dark" className="mt-3" onClick={downloadCV} >CV</Button>
 
                         </Card.Body>
 
