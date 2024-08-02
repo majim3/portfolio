@@ -17,7 +17,7 @@ function ContactScreen() {
     const [isSuccess, setIsSuccess] = useState(false);
     const [result, setResult] = useState(null);
   
-    const accessKey = "YOUR API KEY FROM HERE https://web3forms.com";
+    const accessKey = "your own api on here from web3from";
   
     const { submit: onSubmit } = useWeb3Forms({
       access_key: accessKey,

@@ -24,10 +24,10 @@ function App() {
 
       <Navbar />
       <Col className='mb-5'>
-        <Col name="HomeSection" className="test pt-sm-5 pb-sm-5 mb-5 justify-content-center align-items-center ImageSection" >
+        <Col name="HomeSection" className="pt-sm-5 pb-sm-5 mb-5 justify-content-center align-items-center ImageSection vh-100-xl" >
           <FirstScreenText />
         </Col>
-        <Col name="ResumeSection" className='pt-4 mb-5 ImageSection'>
+        <Col name="ResumeSection" className='pt-4 mb-5 ImageSection vh-100-xl'>
           <ResumeComp />
         </Col>
         <Col name="KuvaSection">
@@ -38,12 +38,12 @@ function App() {
           <Col className="pt-5 pb-5">
             <Video src={video2} />
           </Col>
-          <Col className='EMTSection pt-5 vh-100-xl '>
+          <Col className='EMTSection pt-5  '>
             <Image src={img} src2={testimg} src3={img} src4={testimg}
               title={"Python Scripting project"} text={"Scrapy library is used"} />
           </Col>
         </Col>
-        <Col name="ContactSection" className="mt-5 mb-5 ">
+        <Col name="ContactSection" className="justify-content-center align-items-center d-flex  pt-5 vh-100-xl ">
           <Contact />
         </Col>
       </Col>
