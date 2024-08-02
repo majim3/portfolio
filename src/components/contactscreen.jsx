@@ -29,7 +29,7 @@ function ContactScreen() {
     const [isSuccess, setIsSuccess] = useState(false);
     const [result, setResult] = useState(null);
 
-    const accessKey = "84ae6c65-57ac-431e-ba14-ec9a1c0378d3";
+    const accessKey = "add your api key here";
     const { submit: web3Submit } = useWeb3Forms({
 
         access_key: accessKey,
