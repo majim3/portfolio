@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './ResumeComp.css'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row, ProgressBar } from 'react-bootstrap'
 import { useInView } from 'react-intersection-observer';
 
-const ResumeComp = () => {
+const ResumeComp = ({ now }) => {
 
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -13,12 +13,12 @@ const ResumeComp = () => {
 
     const { ref: ref2, inView: inView2 } = useInView({
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: 1,
     })
 
     const { ref: ref3, inView: inView3 } = useInView({
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: 0.2,
     })
 
     const { ref: ref4, inView: inView4 } = useInView({
@@ -47,16 +47,16 @@ const ResumeComp = () => {
                         <h2>Skills</h2>
                         <div className="resume-item">
                             <ul>
-                                <li className='mt-3'> Back End Coding</li>
-                                <li className='mt-3'> Front End Coding</li>
-                                <li className='mt-3'>Strong Communication</li>
-                                <li className='mt-3'> MySql good understanding of SQL
-                                    syntax, write queries</li>
-                                <li className='mt-3'>Team Collaboration</li>
-                                <li className='mt-3'>Mobile Development (Swift , Kotlin
-                                    and React native)</li>
+                                <li className='mt-3'> Backend Coding(Python, Node.js)</li>
+                                <li className='mt-3'> Frontend Coding</li>
                                 <li className='mt-3'> moderate level of knowledge about
                                     cloud computing (azure cloud and AWS)</li>
+                                <li className='mt-3'> MySql good understanding of SQL</li>
+                                <li className='mt-3'>Mobile Development (Swift , Kotlin
+                                    and React native)</li>
+                                <li className='mt-3'>Team Collaboration</li>
+                                <li className='mt-3'>Strong Communication</li>
+
                             </ul>
                         </div>
                     </div>
@@ -66,6 +66,31 @@ const ResumeComp = () => {
                         <div className="circle">
                         </div>
                         <h2>Professional Experience</h2>
+
+                        <div className="resume-item mt-5">
+                            <h5>SUMMER SIILI, TRAINEE PROGRAM</h5>
+                            <p>Siili </p>
+                            <p className="resume-date">June 2016 - july 2016 </p>
+                            <p><strong>Upwork</strong></p>
+                            <ul>
+                                <li className='mt-3'>Worked alongside experienced programmers to gain a better
+                                    understanding of the software development life cycle. </li>
+                                <li className='mt-3'>Collaborated with team members to identify and troubleshoot
+                                    issues, utilizing problem-solving skills to find effective solutions.</li>
+                            </ul>
+                        </div>
+                        <div className="resume-item mt-5">
+                            <h5>SOFTWARE DEVELOPER TRAINEE</h5>
+                            <p>Gofore Oyj</p>
+                            <p className="resume-date">Oct 2018 - Dec 2018 </p>
+                            <p><strong>Upwork</strong></p>
+                            <ul>
+                                <li className='mt-3'>Utilizing cloud services</li>
+                                <li className='mt-3'>small programming problems</li>
+                                <li className='mt-3'>Completed on-the-job training sessions and demonstrated learned
+                                    skills to supervisors.</li>
+                            </ul>
+                        </div>
                         <div className="resume-item mt-5">
                             <h5>SOFTWARE DEVELOPER TRAINEE</h5>
                             <p>Extreme Consulting</p>
@@ -76,30 +101,6 @@ const ResumeComp = () => {
                                     utilizing problem-solving skills to find effective solutions.</li>
                                 <li className='mt-3'> Engaged in on-the-job learning, applying concepts and skills from
                                     school coursework to real-world problems and challenges.</li>
-                            </ul>
-                        </div>
-                        <div className="resume-item mt-5">
-                            <h5>SUMMER SIILI, TRAINEE PROGRAM</h5>
-                            <p>Siili </p>
-                            <p className="resume-date">June 2016 - july 2016 </p>
-                            <p><strong>Upwork</strong></p>
-                            <ul>
-                                <li className='mt-3'>Worked alongside experienced programmers to gain a better 
-                                understanding of the software development life cycle. </li>
-                                <li className='mt-3'>Collaborated with team members to identify and troubleshoot 
-                                issues, utilizing problem-solving skills to find effective solutions.</li>
-                            </ul>
-                        </div>
-                        <div className="resume-item mt-5">
-                            <h5>JOB LEARNING </h5>
-                            <p>Gofore Oyj</p>
-                            <p className="resume-date">Oct 2018 - Dec 2018 </p>
-                            <p><strong>Upwork</strong></p>
-                            <ul>
-                                <li className='mt-3'>Utilizing cloud services</li>
-                                <li className='mt-3'>small programming problems</li>
-                                <li className='mt-3'>Completed on-the-job training sessions and demonstrated learned
-                                skills to supervisors.</li>
                             </ul>
                         </div>
                     </Col>
@@ -114,7 +115,12 @@ const ResumeComp = () => {
                         <h2>Education</h2>
                         <Col className="resume-item">
                             <h5>Bachelor of Engineering in Information Technology</h5>
+
                             <p className="resume-date">2021 - Still Enrolled</p>
+                            <div className="custom-progress-container">
+                                <ProgressBar now={now} label={`${now}%`} />
+                            </div>
+
                             <p>Metropolia university of applied sciences</p>
                         </Col>
                     </Col>

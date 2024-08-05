@@ -85,8 +85,8 @@ function FirstScreenText() {
                         <h2>About</h2>
                     </Col>
 
-                    <Col className="d-none d-md-block ">
-                        <div className='About'>
+                    <Col className="d-none d-md-block  ">
+                        <div className='About '>
                             <p className='InfoText'>
                                 As a passionate and motivated programmer with a strong desire to
                                 learn, I am seeking a position with a dynamic programming company

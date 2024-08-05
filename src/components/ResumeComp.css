@@ -69,7 +69,17 @@ ul {
 .hidden {
     opacity: 0;
 }
+
 .fadeIn3 {
     opacity: 1;
     transition: opacity 5s ease-in-out;
-  }
+}
+
+.custom-progress-container {
+    width: 300px;
+}
+
+.custom-progress-container .progress {
+    background-color: #e0e0e0;
+    /* Change to your desired unfinished bar color */
+}

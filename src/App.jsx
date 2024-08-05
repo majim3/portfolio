@@ -25,7 +25,7 @@ import ResumeComp from './components/ResumeComp.jsx'
 
 function App() {
 
-
+  const [progress, setProgress] = useState(70);
 
 
   return (
@@ -38,7 +38,7 @@ function App() {
             <FirstScreenText />
           </Col>
           <Col name="ResumeSection" className='pt-4 mb-5 ImageSection '>
-            <ResumeComp />
+            <ResumeComp now={progress} />
           </Col>
           <Col name="KuvaSection">
             <Col className='ImageSection pt-5 vh-100-xl ' >
