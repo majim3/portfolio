@@ -34,15 +34,15 @@ function App() {
       <Navbar />
       
         <Col className='mb-5'>
-          <Col name="HomeSection" className="pt-sm-5 pb-sm-5 mb-5 justify-content-center align-items-center ImageSection vh-100-xl" >
+          <Col name="HomeSection" className="pt-sm-5 pb-sm-5 mb-3 justify-content-center align-items-center ImageSection vh-100-xl" >
             <FirstScreenText />
           </Col>
-          <Col name="ResumeSection" className='pt-4 mb-5 ImageSection '>
+          <Col name="ResumeSection" className='pt-4 mb-3 ImageSection '>
             <ResumeComp now={progress} />
           </Col>
           <Col name="KuvaSection">
             <Col className='ImageSection pt-5 vh-100-xl ' >
-              <Image src={fashionfinderMain} src2={fashionfinderTest} src3={fashionfinder} src4={fashionfinderScan} Contributors={"Fashion Finder is a cloathing search application made by Rouhis, Tuomas01, majim3(Leo Gong) and AxelKah as a school project for Metropolia School of Applied sciences. Fashion Finder is a application that is used to find cloathing with masking system call segment anything for users."}
+              <Image src={fashionfinderMain} src2={fashionfinderTest} src3={fashionfinder} src4={fashionfinderScan} Contributors={"Fashion Finder is a cloathing search application is made by 4 students as a school project for Metropolia School of Applied sciences. Fashion Finder is a application that is used to find cloathing with masking system call segment anything for users."}
                 title={"Fashion Finder"} text={"Python Backend, React Frontend, Segment-Anything, Chatgpt/Bard"} ShadowBoxText1={"The application's main screen"} ShadowBoxTitle1={"Fashion Finder"}
                 ShadowBoxText2={"The link for Clothing Results takes you to Zalando."} ShadowBoxTitle2={"Result"}
                 ShadowBoxText3={"scan screen: From this area, you can Mask the clothing."} ShadowBoxTitle3={"Masking"} />
@@ -52,9 +52,9 @@ function App() {
             </Col>
             <Col className='ImageSection pt-5 vh-100-xl ' >
               <Image2 src3={secondevView} src4={thirdevView}
-                title={"EVChargeGX"} text={"Swift, Map api for the locations of the EV chargers"} Contributors={"EVChargeGX is a IOS application made by made by Rouhis, Tuomas01, majim3(Leo Gong) and AxelKah as a school project for Metropolia School of Applied sciences. EvChargeGX is a application that is used to find electric vechile charging station near the user. The application is available in English and Finnish."}
-                ShadowBoxText2={"MapView that is implemented using mapkit. The markers on the map are charging stations. The searchbar can be used using keyboard or voice and it can be used to check chargers in diffrent parts of the world."} ShadowBoxTitle2={"Main View"}
-                ShadowBoxText3={"In the sheet we can sww information about the staion. Also there is button that can be used to navigate to the station using IOS maps."} ShadowBoxTitle3={"Sheet"} />
+                title={"EVChargeGX"} text={"Swift, Map api for the locations of the EV chargers"} Contributors={"EVChargeGX is a IOS application is made by 4 students as a school project for Metropolia School of Applied sciences. EvChargeGX is a application that is used to find electric vechile charging station near the user. The application is available in English and Finnish."}
+                ShadowBoxText2={"MapView that is implemented using mapkit. The markers on the map are charging stations. The searchbar can be used using keyboard or voice and it can be used to check chargers in different parts of the world."} ShadowBoxTitle2={"Main View"}
+                ShadowBoxText3={"In the sheet we can check informations about the station. Also there is button that can be used to navigate to the station using IOS maps."} ShadowBoxTitle3={"Sheet"} />
             </Col>
             <Col className="pt-5 pb-5">
               <Video src={video1} title={"EVChargeGX"} text={"EVChargeGX demo video"} />

@@ -47,15 +47,7 @@
   margin-bottom: 40px;
 }
 
-.About::before {
-  content: '';
-  position: absolute;
-  left: 25px;
-  top: 0px;
-  bottom: 0px;
-  width: 2px;
-  background-color: #007bff;
-}
+
 
 @media (max-width: 1200px) {
   .custom {

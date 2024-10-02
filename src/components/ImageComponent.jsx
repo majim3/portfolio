@@ -46,13 +46,11 @@ function ImageComponent({
     <Container>
       <Row>
         <Col md={6} sm={12} lg={{ order: 'last' }}>
-          <div className='text-container half'>
-            <div>
+          <Row ref={ref2} className={`element ${inView2 ? 'fadeIn2' : 'hidden'} text-container half`}>  
               <h2>{title}</h2>
               <p>{text}</p>
               <p>{Contributors}</p>
-            </div>
-          </div>
+          </Row>
         </Col>
         <Col md={6} lg={6} className='mb-4'>
           <Row>

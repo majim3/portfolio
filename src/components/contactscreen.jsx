@@ -27,7 +27,10 @@ function ContactScreen() {
         setCaptchaToken(null);
     };
 
-    const accessKey = "your key here pls";
+    const accessKey = "";
+
+    "your key above pls ↑"
+
     const { submit: web3Submit } = useWeb3Forms({
 
         access_key: accessKey,

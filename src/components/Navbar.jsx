@@ -71,7 +71,7 @@ function Navibar() {
                 offset={-70}
                 smooth={true}
               >
-                contact
+                Contact
               </Link>
             </Nav.Link>
           </Nav>
