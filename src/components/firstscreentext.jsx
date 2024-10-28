@@ -3,7 +3,7 @@ import './firstscreentext.css'
 import { Button, Row } from 'react-bootstrap'
 import { Container, Col, Image } from 'react-bootstrap'
 import { useInView } from 'react-intersection-observer';
-import catImage from '../assets/faceImage.jpg';
+import catImage from '../assets/kuva.jpg';
 import { Link } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
 import { TypeAnimation } from 'react-type-animation';

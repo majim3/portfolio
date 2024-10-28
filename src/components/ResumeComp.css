@@ -63,7 +63,7 @@ ul {
 
 .fadeIn2 {
     opacity: 1;
-    transition: opacity 4s ease-in-out;
+    transition: opacity 2s ease-in-out;
 }
 
 .hidden {
@@ -72,7 +72,7 @@ ul {
 
 .fadeIn3 {
     opacity: 1;
-    transition: opacity 5s ease-in-out;
+    transition: opacity 2s ease-in-out;
 }
 
 .custom-progress-container {
