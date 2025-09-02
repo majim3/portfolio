@@ -103,6 +103,18 @@ const ResumeComp = ({ now }) => {
                                     school coursework to real-world problems and challenges.</li>
                             </ul>
                         </div>
+
+                        <div className="resume-item mt-5">
+                            <h5>Software Development Intern</h5>
+                            <p>Good2know</p>
+                            <p className="resume-date">Jul 2025 - Sep 2025</p>
+                            <p><strong>Upwork</strong></p>
+                            <ul>
+                                <li className='mt-3'>Led my own project independently from concept to delivery for end users.</li>
+                                <li className='mt-3'> Gained exposure to the marketing side of product development.</li>
+                                <li className='mt-3'> Took responsibility for making technical decisions and solving coding challenges.</li>
+                            </ul>
+                        </div>
                     </Col>
                 </Col>
             </Row>
