@@ -3,7 +3,7 @@ import './firstscreentext.css'
 import { Button, Row } from 'react-bootstrap'
 import { Container, Col, Image } from 'react-bootstrap'
 import { useInView } from 'react-intersection-observer';
-import catImage from '../assets/kuva.jpg';
+import catImage from '../assets/faceImage.jpg';
 import { Link } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
 import { TypeAnimation } from 'react-type-animation';
@@ -39,36 +39,33 @@ function FirstScreenText() {
         <Container className="justify-content-center pt-5">
             <Row className="text-center">
                 <Col ref={ref1} className={`element ${inView1 ? 'fadeIn' : 'hidden'} d-flex  flex-column align-items-center `}>
-                    <Col md={6} className="mt-5">
-                        <h1>Leo Gong</h1>
-                    </Col>
-
-                    <Col md={6} className="mt-sm-5 mt-3">
-                        <Typewriter
-                            onInit={(typewriter) => {
-                                typewriter
-                                    .typeString('<span>I am a <strong>Developer</strong> </span>')
-                                    .pauseFor(1000)
-                                    .deleteChars(10)
-                                    .typeString('<span><strong>Problem solver</strong></span>')
-                                    .pauseFor(1000)
-                                    .deleteChars(14)
-                                    .typeString('<span> <strong>Student</strong></span>')
-                                    .pauseFor(1000)
-                                    .deleteAll(50)
-                                    .start();
-                            }}
-                            options={{
-                                autoStart: true,
-                                loop: true,
-                            }}
-                        />
+                    <Col md={6} className="mt-5 movingText"  >
+                        <h3>
+                            <Typewriter
+                                onInit={(typewriter) => {
+                                    typewriter
+                                        .typeString('<span>I am a <strong>Developer</strong> </span>')
+                                        .pauseFor(1000)
+                                        .deleteChars(10)
+                                        .typeString('<span><strong>Problem solver</strong></span>')
+                                        .pauseFor(1000)
+                                        .deleteChars(14)
+                                        .typeString('<span> <strong>Student</strong></span>')
+                                        .pauseFor(1000)
+                                        .deleteAll(50)
+                                        .start();
+                                }}
+                                options={{
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            /></h3>
                     </Col>
 
 
 
-                    <Col className='mt-sm-5 mt-3' >
-                        <Button className="contact-button" size="sm">
+                    <Col className='mt-sm-5 mt-5' >
+                        <Button className="contact-button" size="md">
                             <Link
                                 activeClass="active"
                                 to="ContactSection"
@@ -81,12 +78,9 @@ function FirstScreenText() {
                         </Button>
                     </Col>
 
-                    <Col className="mt-3  mt-4 d-none d-md-block" >
+                    <Col className="d-none d-md-block mt-sm-5 ">
                         <h2>About</h2>
-                    </Col>
-
-                    <Col className="d-none d-md-block  ">
-                        <div className='About '>
+                        <div className='About mt-3'>
                             <p className='InfoText'>
                                 As a passionate and motivated programmer with a strong desire to
                                 learn, I am seeking a position with a dynamic programming company
@@ -100,7 +94,7 @@ function FirstScreenText() {
                     </Col>
                 </Col>
 
-                <Col xl={6} sm={12} xs={12} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom p5 mt-5  mb-5`}>
+                <Col xl={6} sm={12} xs={12} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom p5 mt-4  mb-3`}>
                     <Container className=' container  d-flex flex-column justify-content-center align-items-center text-center'>
                         <div className="image-containerFirst">
                             <Image src={catImage} rounded className="stretched-image" />

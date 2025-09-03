@@ -14,20 +14,20 @@ import cv from '../assets/cv.pdf'
 
 function ContactScreen() {
 
-    const { register, reset, handleSubmit, formState: { errors } } = useForm();
+    const { register, reset, handleSubmit, setValue, formState: { errors } } = useForm();
     const [captchaToken, setCaptchaToken] = useState(null);
     const captchaRef = useRef(null);
 
     const onHCaptchaChange = (token) => {
         setCaptchaToken(token);
-        setValue('Captcha', token, { shouldValidate: true });
+        setValue('h-captcha-response', token, { shouldValidate: true });
     };
 
     const onHCaptchaExpire = () => {
         setCaptchaToken(null);
     };
 
-    const accessKey = "";
+    const accessKey = "84ae6c65-57ac-431e-ba14-ec9a1c0378d3";
 
     "your key above pls ↑"
 

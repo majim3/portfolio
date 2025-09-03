@@ -33,7 +33,7 @@ function App() {
 
       <Navbar />
       
-        <Col className='mb-5'>
+        <Col >
           <Col name="HomeSection" className="pt-sm-5 pb-sm-5 mb-3 justify-content-center align-items-center ImageSection vh-100-xl" >
             <FirstScreenText />
           </Col>
