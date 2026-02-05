@@ -25,7 +25,7 @@ import ResumeComp from './components/ResumeComp.jsx'
 
 function App() {
 
-  const [progress, setProgress] = useState(70);
+  const [progress, setProgress] = useState(90);
 
 
   return (

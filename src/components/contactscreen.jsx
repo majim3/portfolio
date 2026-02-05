@@ -10,7 +10,7 @@ import './contactscreen.css'
 import { useInView } from 'react-intersection-observer';
 import Swal from 'sweetalert2'
 import HCaptcha from '@hcaptcha/react-hcaptcha';
-import cv from '../assets/cv.pdf'
+import cv from '../assets/CvEng.pdf'
 
 function ContactScreen() {
 
@@ -27,7 +27,7 @@ function ContactScreen() {
         setCaptchaToken(null);
     };
 
-    const accessKey = "";
+    const accessKey = "85273ea7-3670-41f6-8278-88f2a05c3ac2";
 
     "your key above pls ↑"
 
