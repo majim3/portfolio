@@ -36,21 +36,21 @@ function ImageComponent2({
   return (
     <Container>
       <Row>
-        <Col sm={6} lg={{ order: 'last' }} md={{ order: 'first' }}>
+        <Col   lg={{ order: 'first' }} >
           <div className='text-container half'>
             <div>
               <h2>{title}</h2>
               <p>{text}</p>
-              <p>{Contributors}</p>
+              <p className='mt-5'>{Contributors}</p>
             </div>
           </div>
         </Col>
-        <Col md={6} lg={6} className='mb-4'>
-          <Row>
-            <Col sm={6} xs={6} ref={ref3} className={`element ${inView3 ? 'fadeIn3' : 'hidden'} containerImages mt-3`}>
+        <Col lg={6} md={12} className='mb-4'>
+          <Row >
+            <Col xs={6}  md={4} ref={ref3} className={`element ${inView3 ? 'fadeIn3' : 'hidden'} containerImages mt-3`}>
               <BoxShadowComp src={src3} ShadowBoxTitle={ShadowBoxTitle2} ShadowBoxText={ShadowBoxText2} />
             </Col>
-            <Col sm={6} xs={6} ref={ref4} className={`element ${inView4 ? 'fadeIn4' : 'hidden'} containerImages mt-3`}>
+            <Col xs={6} md={{ span: 4, offset: 4 }} ref={ref4} className={`element ${inView4 ? 'fadeIn4' : 'hidden'} containerImages mt-3`}>
               <BoxShadowComp src={src4} ShadowBoxTitle={ShadowBoxTitle3} ShadowBoxText={ShadowBoxText3} />
             </Col>
           </Row>

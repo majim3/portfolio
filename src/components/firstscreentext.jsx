@@ -38,8 +38,8 @@ function FirstScreenText() {
     return (
         <Container className="justify-content-center pt-5">
             <Row className="text-center">
-                <Col ref={ref1} className={`element ${inView1 ? 'fadeIn' : 'hidden'} d-flex  flex-column align-items-center `}>
-                    <Col md={6} className="mt-5 movingText"  >
+                <Col xl={6} ref={ref1} className={`element ${inView1 ? 'fadeIn' : 'hidden'} d-flex  flex-column align-items-center `}>
+                    <Col  className="mt-5 movingText"  >
                         <h3>
                             <Typewriter
                                 onInit={(typewriter) => {
@@ -94,8 +94,8 @@ function FirstScreenText() {
                     </Col>
                 </Col>
 
-                <Col xl={6} sm={12} xs={12} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom p5 mt-4  mb-3`}>
-                    <Container className=' container  d-flex flex-column justify-content-center align-items-center text-center'>
+                <Col xl={6} md={12} sm={12} xs={12} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom  mt-4  mb-3`}>
+                    <Container className='container  d-flex flex-column justify-content-center align-items-center text-center'>
                         <div className="image-containerFirst">
                             <Image src={catImage} rounded className="stretched-image" />
 
