@@ -27,7 +27,7 @@ function ContactScreen() {
         setCaptchaToken(null);
     };
 
-    const accessKey = "85273ea7-3670-41f6-8278-88f2a05c3ac2";
+    const accessKey = "84ae6c65-57ac-431e-ba14-ec9a1c0378d3";
 
     "your key above pls ↑"
 
