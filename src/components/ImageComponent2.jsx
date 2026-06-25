@@ -36,7 +36,7 @@ function ImageComponent2({
   return (
     <Container>
       <Row>
-        <Col sm={6} lg={{ order: 'last' }} md={{ order: 'first' }}>
+        <Col md={6} lg={{ order: 'first' }} md={{ order: 'last' }}>
           <div className='text-container half'>
             <div>
               <h2>{title}</h2>

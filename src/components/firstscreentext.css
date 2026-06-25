@@ -13,7 +13,7 @@
 
 .fadeInS {
   opacity: 1;
-  transition: opacity 5s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 .custom{
   padding-top: 100px;

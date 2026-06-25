@@ -10,7 +10,8 @@ import './contactscreen.css'
 import { useInView } from 'react-intersection-observer';
 import Swal from 'sweetalert2'
 import HCaptcha from '@hcaptcha/react-hcaptcha';
-import cv from '../assets/cv.pdf'
+import cv from '../assets/Cv.pdf'
+import cvEng from '../assets/CvENG.pdf'
 
 function ContactScreen() {
 
@@ -27,7 +28,7 @@ function ContactScreen() {
         setCaptchaToken(null);
     };
 
-    const accessKey = "";
+    const accessKey = "85273ea7-3670-41f6-8278-88f2a05c3ac2";
 
     "your key above pls ↑"
 
@@ -63,10 +64,10 @@ function ContactScreen() {
             return;
         }
 
-        
+
         data['h-captcha-response'] = captchaToken;
 
-        
+
         web3Submit(data);
     };
 
@@ -75,72 +76,83 @@ function ContactScreen() {
         threshold: 0.5,
     });
 
-    const downloadCV = () => {
+    const downloadCVFin = () => {
         const link = document.createElement('a');
         link.href = cv;
-        link.download = 'Leo_Gong_CV.pdf'; 
+        link.download = 'Leo_Gong_CV.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-      };
+    };
+    const downloadCVEng = () => {
+        const link = document.createElement('a');
+        link.href = cvEng;
+        link.download = 'Leo_Gong_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
 
     return (
         <Container ref={ref} className={`element ${inView ? 'fadeIn' : 'hidden'} d-flex justify-content-center align-items-center`} >
             <Row className=' d-flex justify-content-center align-items-center'>
-                <Col sm={6} xs={12} className="mt-4 d-flex justify-content-center  custom-container p-4">
-                    <Card >
-                        <Card.Body className="text-center">
-                            <Row className='mt-3'>
+                <Col sm={6} xs={12} className="mt-4 d-flex justify-content-center custom-container p-4">
+                    <Row className="d-flex justify-content-center text-center">
+                        <Col className="d-flex justify-content-center">
+                            <div className="mx-2">
+                                <a
+                                    href="https://www.linkedin.com/in/leo-gong-585538155/"
+                                    className="icon-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                                </a>
+                            </div>
+                            <div className="mx-2">
+                                <a
+                                    href="https://www.facebook.com/leo.go.10004"
+                                    className="icon-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FontAwesomeIcon icon={faFacebook} size="2x" />
+                                </a>
+                            </div>
+                            <div className="mx-2">
+                                <a
+                                    href="https://www.instagram.com/Leoryoo/"
+                                    className="icon-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                                </a>
+                            </div>
+                            <div className="mx-2">
+                                <a
+                                    href="https://github.com/majim3"
+                                    className="icon-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                                </a>
+                            </div>
+                        </Col>
 
-                                <Col md={3}>
-                                    <a
-                                        href="https://www.linkedin.com/in/leo-gong-585538155/"
-                                        className="icon-link"
-                                        target="_blank"
-                                        rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-2" />
-                                    </a>
-                                </Col>
-                                <Col md={3}>
-                                    <a
-                                        href="https://www.facebook.com/leo.go.10004"
-                                        className="icon-link"
-                                        target="_blank"
-                                        rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faFacebook} size="2x" className="mx-2" />
-                                    </a>
-                                </Col>
-                                <Col md={3}>
-                                    <a
-                                        href="https://www.instagram.com/Leoryoo/"
-                                        className="icon-link"
-                                        target="_blank"
-                                        rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faInstagram} size="2x" className="mx-2" />
-                                    </a>
-                                </Col>
-                                <Col md={3}>
-                                    <a
-                                        href="https://github.com/majim3"
-                                        className="icon-link"
-                                        target="_blank"
-                                        rel="noopener noreferrer">
-                                        <FontAwesomeIcon icon={faGithub} size="2x" className="mx-2" />
-                                    </a>
-                                </Col>
+                        <Card.Text className="mt-3 mb-3">
+                            <a href="tel:+358 408278956" className="call-button">Puh: +358 408278956</a>
+                        </Card.Text>
+                        <Card.Text className="mb-3">
+                            <a href="mailto:LeoGong3@gmail.com" className="call-button">LeoGong3@gmail.com</a>
+                        </Card.Text>
 
-
-
-                            </Row>
-                            <Card.Text className="mt-4"><a href="tel:+358 408278956" variant="dark" className='call-button' >Puh: +358 408278956</a></Card.Text>
-                            <Card.Text className="mt-3"><a href={`mailto:LeoGong3@gmail.com`} className='call-button'>LeoGong3@gmail.com</a></Card.Text>
-                            <Button variant="dark" className="mt-3" onClick={downloadCV} >CV</Button>
-
-                        </Card.Body>
-
-                    </Card >
-                </Col >
+                        <Button variant="dark" className="mb-4  call-button" onClick={downloadCVFin}>CV Fin</Button>
+                        <Button variant="dark" className="mt-4  call-button" onClick={downloadCVEng}>CV Eng</Button>
+                    </Row>
+                </Col>
 
                 <Col sm={6} xs={12} className='pt-5 custom-contact' >
                     <Form
