@@ -1,0 +1,103 @@
+{
+  "hash": "92e4a5f3",
+  "configHash": "6e265f48",
+  "lockfileHash": "476f7bf0",
+  "browserHash": "c25213fc",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "1547ff95",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "263601b7",
+      "needsInterop": true
+    },
+    "react-bootstrap": {
+      "src": "../../node_modules/react-bootstrap/esm/index.js",
+      "file": "react-bootstrap.js",
+      "fileHash": "5b940c46",
+      "needsInterop": false
+    },
+    "react-intersection-observer": {
+      "src": "../../node_modules/react-intersection-observer/index.mjs",
+      "file": "react-intersection-observer.js",
+      "fileHash": "3cb62b4a",
+      "needsInterop": false
+    },
+    "react-scroll": {
+      "src": "../../node_modules/react-scroll/modules/index.js",
+      "file": "react-scroll.js",
+      "fileHash": "010ec316",
+      "needsInterop": true
+    },
+    "react-type-animation": {
+      "src": "../../node_modules/react-type-animation/dist/esm/index.es.js",
+      "file": "react-type-animation.js",
+      "fileHash": "2722d017",
+      "needsInterop": false
+    },
+    "typewriter-effect": {
+      "src": "../../node_modules/typewriter-effect/dist/react.js",
+      "file": "typewriter-effect.js",
+      "fileHash": "6513dd92",
+      "needsInterop": true
+    },
+    "react-hook-form": {
+      "src": "../../node_modules/react-hook-form/dist/index.esm.mjs",
+      "file": "react-hook-form.js",
+      "fileHash": "3e1e1b0b",
+      "needsInterop": false
+    },
+    "@web3forms/react": {
+      "src": "../../node_modules/@web3forms/react/dist/index.modern.js",
+      "file": "@web3forms_react.js",
+      "fileHash": "a902ff89",
+      "needsInterop": false
+    },
+    "@fortawesome/react-fontawesome": {
+      "src": "../../node_modules/@fortawesome/react-fontawesome/index.es.js",
+      "file": "@fortawesome_react-fontawesome.js",
+      "fileHash": "ab41d7f2",
+      "needsInterop": false
+    },
+    "@fortawesome/free-brands-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-brands-svg-icons/index.mjs",
+      "file": "@fortawesome_free-brands-svg-icons.js",
+      "fileHash": "a6cbaa15",
+      "needsInterop": false
+    },
+    "sweetalert2": {
+      "src": "../../node_modules/sweetalert2/dist/sweetalert2.all.js",
+      "file": "sweetalert2.js",
+      "fileHash": "6c9da996",
+      "needsInterop": true
+    },
+    "@hcaptcha/react-hcaptcha": {
+      "src": "../../node_modules/@hcaptcha/react-hcaptcha/dist/esm/index.js",
+      "file": "@hcaptcha_react-hcaptcha.js",
+      "fileHash": "d028f49d",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-TMKJMMJP": {
+      "file": "chunk-TMKJMMJP.js"
+    },
+    "chunk-PNDONJFS": {
+      "file": "chunk-PNDONJFS.js"
+    },
+    "chunk-HCGKX5ED": {
+      "file": "chunk-HCGKX5ED.js"
+    },
+    "chunk-WNPTCGAH": {
+      "file": "chunk-WNPTCGAH.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
+}

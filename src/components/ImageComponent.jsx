@@ -45,6 +45,7 @@ function ImageComponent({
   return (
     <Container>
       <Row>
+        <h1 className='d-flex justify-content-center pb-5'>Projects</h1>
         <Col md={6} sm={12} lg={{ order: 'last' }}>
           <Row ref={ref2} className={`element ${inView2 ? 'fadeIn2' : 'hidden'} text-container half`}>  
               <h2>{title}</h2>

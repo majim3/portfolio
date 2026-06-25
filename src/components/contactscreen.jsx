@@ -10,18 +10,18 @@ import './contactscreen.css'
 import { useInView } from 'react-intersection-observer';
 import Swal from 'sweetalert2'
 import HCaptcha from '@hcaptcha/react-hcaptcha';
-import cv from '../assets/Cv.pdf'
+import cv from '../assets/CvEng.pdf'
 import cvEng from '../assets/CvENG.pdf'
 
 function ContactScreen() {
 
-    const { register, reset, handleSubmit, formState: { errors } } = useForm();
+    const { register, reset, handleSubmit, setValue, formState: { errors } } = useForm();
     const [captchaToken, setCaptchaToken] = useState(null);
     const captchaRef = useRef(null);
 
     const onHCaptchaChange = (token) => {
         setCaptchaToken(token);
-        setValue('Captcha', token, { shouldValidate: true });
+        setValue('h-captcha-response', token, { shouldValidate: true });
     };
 
     const onHCaptchaExpire = () => {

@@ -47,8 +47,12 @@ const ResumeComp = ({ now }) => {
                         <h2>Skills</h2>
                         <div className="resume-item">
                             <ul>
-                                <li className='mt-3'> Backend Coding(Python, Node.js)</li>
+                                <li className='mt-3'> Backend Coding (Python, Node.js)</li>
                                 <li className='mt-3'> Frontend Coding</li>
+                                <li className='mt-3'> Experience working with LLM APIs</li>
+                                <li className='mt-3'> Prompt engineering and prompt optimization</li>
+                                <li className='mt-3'> Familiarity with neural networks and Large Language Models (LLMs)</li>
+                                <li className='mt-3'> Version Control (Git, GitHub)</li>
                                 <li className='mt-3'> moderate level of knowledge about
                                     cloud computing (azure cloud and AWS)</li>
                                 <li className='mt-3'> MySql good understanding of SQL</li>
@@ -70,7 +74,7 @@ const ResumeComp = ({ now }) => {
                         <div className="resume-item mt-5">
                             <h5>SUMMER SIILI, TRAINEE PROGRAM</h5>
                             <p>Siili </p>
-                            <p className="resume-date">June 2016 - july 2016 </p>
+                            <p className="resume-date">Jun 2016 - Jul 2016 </p>
                             <p><strong>Upwork</strong></p>
                             <ul>
                                 <li className='mt-3'>Worked alongside experienced programmers to gain a better
@@ -101,6 +105,18 @@ const ResumeComp = ({ now }) => {
                                     utilizing problem-solving skills to find effective solutions.</li>
                                 <li className='mt-3'> Engaged in on-the-job learning, applying concepts and skills from
                                     school coursework to real-world problems and challenges.</li>
+                            </ul>
+                        </div>
+
+                        <div className="resume-item mt-5">
+                            <h5>Software Development Intern</h5>
+                            <p>Good2know</p>
+                            <p className="resume-date">Jul 2025 - Sep 2025</p>
+                            <p><strong>Upwork</strong></p>
+                            <ul>
+                                <li className='mt-3'>Led my own project independently from concept to delivery for end users.</li>
+                                <li className='mt-3'> Gained exposure to the marketing side of product development.</li>
+                                <li className='mt-3'> Took responsibility for making technical decisions and solving coding challenges.</li>
                             </ul>
                         </div>
                     </Col>

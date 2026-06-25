@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button, NavbarToggle } from 'react-bootstrap'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Navbar } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
 import { Container } from 'react-bootstrap'
@@ -10,12 +10,31 @@ import { TypeAnimation } from 'react-type-animation';
 
 
 function Navibar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [scrollUp, setScrollUp] = useState(false);
 
-
+useEffect(() => {
+    let lastScroll = 0;
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScroll) {
+        setScrollUp(false);
+      } else {
+        setScrollUp(true);
+      }
+      setScrolled (currentScroll > 50);
+      lastScroll = currentScroll;
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []); 
+      
+      const offset = window.scrollY;
   return (
-    <Navbar expand="lg" fixed="top" className="navbar">
+    <Navbar expand="lg" fixed="top" className={`navbar transition ${
+        scrolled ? "bg-white shadow-sm py-2" : "bg-transparent py-3"}`}>
       <Container className=' '>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="#" className={`transition ${scrolled ? "opacity-0 translate-up" : "opacity-100"} fs-3 fw-bold`}>
         <TypeAnimation
             sequence={['Leo Gong']}
           />
