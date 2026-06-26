@@ -25,7 +25,7 @@ import ResumeComp from './components/ResumeComp.jsx'
 
 function App() {
 
-  const [progress, setProgress] = useState(90);
+  const [progress, setProgress] = useState(100);
 
 
   return (
@@ -33,7 +33,7 @@ function App() {
 
       <Navbar />
         <Col >
-          <Col name="HomeSection" className="pt-sm-5 pb-sm-5 mb-3  d-flex justify-content-center align-items-center ImageSection vh-100-xl" >
+          <Col name="HomeSection" className="pt-5 pt-sm-2 pb-sm-2 mb-3  d-flex justify-content-center align-items-center ImageSection vh-100-xl home-section" >
             <FirstScreenText />
           </Col>
           <Col name="ResumeSection" className='pt-4 mb-3 ImageSection '>

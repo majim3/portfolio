@@ -10,8 +10,8 @@ import './contactscreen.css'
 import { useInView } from 'react-intersection-observer';
 import Swal from 'sweetalert2'
 import HCaptcha from '@hcaptcha/react-hcaptcha';
-import cv from '../assets/CvEng.pdf'
-import cvEng from '../assets/CvENG.pdf'
+import cv from '../assets/Leo_Gong_CV_FI.pdf'
+import cvEng from '../assets/Leo_Gong_CV_web.pdf'
 
 function ContactScreen() {
 
@@ -28,7 +28,7 @@ function ContactScreen() {
         setCaptchaToken(null);
     };
 
-    const accessKey = "85273ea7-3670-41f6-8278-88f2a05c3ac2";
+    const accessKey = "8f0fb3f7-620c-4bac-bba9-5914b5dfaf93";
 
     "your key above pls ↑"
 

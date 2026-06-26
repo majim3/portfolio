@@ -49,7 +49,8 @@
 
 
 
-@media (min-width: 900px) {
+
+@media (min-width: 992px) {
   .vh-100-xl {
     height: 100vh !important;
   }
@@ -57,5 +58,17 @@
 
 .contact-section {
   padding-bottom: 200px;
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 991px) {
+  .home-section {
+    padding-top: 80px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-section {
+    padding-top: 50px !important;
+  }
 }

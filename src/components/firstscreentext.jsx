@@ -6,52 +6,39 @@ import { useInView } from 'react-intersection-observer';
 import catImage from '../assets/faceImage.jpg';
 import { Link } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
-import { TypeAnimation } from 'react-type-animation';
-
-
-
+import { useState } from 'react';
 
 function FirstScreenText() {
-
-
-
 
     const { ref: ref1, inView: inView1 } = useInView({
         triggerOnce: true,
         threshold: 0.3,
     });
 
-
-
     const { ref: ref2, inView: inView2 } = useInView({
         triggerOnce: true,
         threshold: 0.3,
     });
 
-
-
-
-
-
-
+    const [bioVisible, setBioVisible] = useState(false);
 
     return (
-        <Container className="justify-content-center pt-5">
-            <Row className="text-center">
-                <Col xl={6} ref={ref1} className={`element ${inView1 ? 'fadeIn' : 'hidden'} d-flex  flex-column align-items-center `}>
-                    <Col  className="mt-5 movingText"  >
+        <Container className="justify-content-center">
+            <Row className="text-center gx-5 gy-4">
+                <Col lg={6} ref={ref1} className={`element ${inView1 ? 'fadeIn' : 'hidden'} d-flex flex-column align-items-center gap-5`}>
+                    <Col className="movingText">
                         <h3>
                             <Typewriter
                                 onInit={(typewriter) => {
                                     typewriter
                                         .typeString('<span>I am a <strong>Developer</strong> </span>')
-                                        .pauseFor(1000)
+                                        .pauseFor(400)
                                         .deleteChars(10)
                                         .typeString('<span><strong>Problem solver</strong></span>')
-                                        .pauseFor(1000)
+                                        .pauseFor(400)
                                         .deleteChars(14)
                                         .typeString('<span> <strong>Student</strong></span>')
-                                        .pauseFor(1000)
+                                        .pauseFor(400)
                                         .deleteAll(50)
                                         .start();
                                 }}
@@ -62,9 +49,7 @@ function FirstScreenText() {
                             /></h3>
                     </Col>
 
-
-
-                    <Col className='mt-sm-5 mt-5' >
+                    <Col className='mt-0'>
                         <Button className="contact-button" size="md">
                             <Link
                                 activeClass="active"
@@ -78,44 +63,33 @@ function FirstScreenText() {
                         </Button>
                     </Col>
 
-                    <Col className="d-none d-md-block mt-sm-5 ">
-                        <h2>About</h2>
-                        <div className='About mt-3'>
-                            <p className='InfoText'>
-                                As a passionate and motivated programmer with a strong desire to
-                                learn, I am seeking a position with a dynamic programming company
-                                where I can apply and expand my current programming knowledge and
-                                skills. I am excited to work alongside experienced developers to learn
-                                and grow in a fast-paced and collaborative environment. My strong
-                                work ethic, attention to detail, and eagerness to learn will make me a
-                                valuable member of your programming team.
-                            </p>
-                        </div>
+                    <Col className="d-none d-lg-block bio-desktop text-start">
+                        <p>As a passionate and motivated programmer with a strong desire to
+                            learn, I am seeking a position with a dynamic programming company
+                            where I can apply and expand my current programming knowledge and
+                            skills. I am excited to work alongside experienced developers to learn
+                            and grow in a fast-paced and collaborative environment.</p>
                     </Col>
                 </Col>
 
-                <Col xl={6} md={12} sm={12} xs={12} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom  mt-4  mb-3`}>
-                    <Container className='container  d-flex flex-column justify-content-center align-items-center text-center'>
-                        <div className="image-containerFirst">
+                <Col lg={6} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom mb-3`}>
+                    <Container className='container d-flex flex-column justify-content-center align-items-center text-center'>
+                        <div className="image-containerFirst" onClick={() => setBioVisible(v => !v)}>
                             <Image src={catImage} rounded className="stretched-image" />
-
-                            <div className="Content d-flex flex-column justify-content-center align-items-center text-center">
+                            <div className={`Content d-flex flex-column justify-content-center align-items-center text-center ${bioVisible ? 'bio-visible' : ''}`}>
                                 <h1>About</h1>
-                                <p> As a passionate and motivated programmer with a strong desire to
+                                <p>As a passionate and motivated programmer with a strong desire to
                                     learn, I am seeking a position with a dynamic programming company
                                     where I can apply and expand my current programming knowledge and
                                     skills. I am excited to work alongside experienced developers to learn
-                                    and grow in a fast-paced and collaborative environment. My strong
-                                    work ethic, attention to detail, and eagerness to learn will make me a
-                                    valuable member of your programming team.</p>
-
+                                    and grow in a fast-paced and collaborative environment.</p>
                             </div>
                         </div>
+                        <p className="tap-hint d-block d-lg-none mt-2">👆 Tap image to learn more</p>
                     </Container>
-
                 </Col>
             </Row>
-        </Container >
+        </Container>
     );
 };
 

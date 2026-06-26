@@ -15,7 +15,7 @@
 
 .fadeIn {
   opacity: 1;
-  transition: opacity 2s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
 }
 
 a.icon-link {

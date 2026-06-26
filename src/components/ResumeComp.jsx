@@ -75,7 +75,6 @@ const ResumeComp = ({ now }) => {
                             <h5>SUMMER SIILI, TRAINEE PROGRAM</h5>
                             <p>Siili </p>
                             <p className="resume-date">Jun 2016 - Jul 2016 </p>
-                            <p><strong>Upwork</strong></p>
                             <ul>
                                 <li className='mt-3'>Worked alongside experienced programmers to gain a better
                                     understanding of the software development life cycle. </li>
@@ -87,7 +86,6 @@ const ResumeComp = ({ now }) => {
                             <h5>SOFTWARE DEVELOPER TRAINEE</h5>
                             <p>Gofore Oyj</p>
                             <p className="resume-date">Oct 2018 - Dec 2018 </p>
-                            <p><strong>Upwork</strong></p>
                             <ul>
                                 <li className='mt-3'>Utilizing cloud services</li>
                                 <li className='mt-3'>small programming problems</li>
@@ -99,7 +97,6 @@ const ResumeComp = ({ now }) => {
                             <h5>SOFTWARE DEVELOPER TRAINEE</h5>
                             <p>Extreme Consulting</p>
                             <p className="resume-date">Apr 2019 - May 2019</p>
-                            <p><strong>Upwork</strong></p>
                             <ul>
                                 <li className='mt-3'>Collaborated with coworkers to identify and troubleshoot issues,
                                     utilizing problem-solving skills to find effective solutions.</li>
@@ -112,7 +109,6 @@ const ResumeComp = ({ now }) => {
                             <h5>Software Development Intern</h5>
                             <p>Good2know</p>
                             <p className="resume-date">Jul 2025 - Sep 2025</p>
-                            <p><strong>Upwork</strong></p>
                             <ul>
                                 <li className='mt-3'>Led my own project independently from concept to delivery for end users.</li>
                                 <li className='mt-3'> Gained exposure to the marketing side of product development.</li>
@@ -132,7 +128,7 @@ const ResumeComp = ({ now }) => {
                         <Col className="resume-item">
                             <h5>Bachelor of Engineering in Information Technology</h5>
 
-                            <p className="resume-date">2021 - Still Enrolled</p>
+                            <p className="resume-date">2021 - 2025</p>
                             <div className="custom-progress-container">
                                 <ProgressBar now={now} label={`${now}%`} />
                             </div>

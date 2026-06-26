@@ -6,7 +6,6 @@ import { Nav } from 'react-bootstrap'
 import { Container } from 'react-bootstrap'
 import { Link } from 'react-scroll'
 import './Navbar.css'
-import { TypeAnimation } from 'react-type-animation';
 
 
 function Navibar() {
@@ -29,18 +28,15 @@ useEffect(() => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []); 
       
-      const offset = window.scrollY;
   return (
     <Navbar expand="lg" fixed="top" className={`navbar transition ${
         scrolled ? "bg-white shadow-sm py-2" : "bg-transparent py-3"}`}>
       <Container className=' '>
         <Navbar.Brand href="#" className={`transition ${scrolled ? "opacity-0 translate-up" : "opacity-100"} fs-3 fw-bold`}>
-        <TypeAnimation
-            sequence={['Leo Gong']}
-          />
+          Leo Gong
           </Navbar.Brand>
         <Navbar.Toggle aria-controls='navbarScroll' data-bs-target="#navbarScroll" />
-        <Navbar.Collapse>
+        <Navbar.Collapse id="navbarScroll">
           <Nav className="ms-auto">
             <Nav.Link className='p-2'>
               <Link
