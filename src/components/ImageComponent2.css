@@ -23,8 +23,8 @@
 
 .image-container .half {
   width: 100%;
-  margin-right: 20px; 
-  background-color: #B4B8AB;
+  margin-right: 20px;
+  background-color: var(--surface);
 }
 
 .image-container img {

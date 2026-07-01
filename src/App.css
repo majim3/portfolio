@@ -1,5 +1,5 @@
 .btn-primary {
-  background-color: #35393C;
+  background-color: var(--text-primary);
 }
 
 
@@ -41,7 +41,7 @@
 
 .ImageSection,
 .EMTSection {
-  background-color: #f0f0f0;
+  background-color: var(--surface);
   padding-bottom: 50px;
   padding-top: 50px;
 }
@@ -58,7 +58,7 @@
 
 .contact-section {
   padding-bottom: 200px;
-  background-color: #f0f0f0;
+  background-color: var(--surface);
 }
 
 @media (max-width: 991px) {

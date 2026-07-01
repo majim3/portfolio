@@ -37,7 +37,7 @@ function FirstScreenText() {
                                         .typeString('<span><strong>Problem solver</strong></span>')
                                         .pauseFor(400)
                                         .deleteChars(14)
-                                        .typeString('<span> <strong>Student</strong></span>')
+                                        .typeString('<span> <strong>AWS Certified</strong></span>')
                                         .pauseFor(400)
                                         .deleteAll(50)
                                         .start();
@@ -64,11 +64,12 @@ function FirstScreenText() {
                     </Col>
 
                     <Col className="d-none d-lg-block bio-desktop text-start">
-                        <p>As a passionate and motivated programmer with a strong desire to
-                            learn, I am seeking a position with a dynamic programming company
-                            where I can apply and expand my current programming knowledge and
-                            skills. I am excited to work alongside experienced developers to learn
-                            and grow in a fast-paced and collaborative environment.</p>
+                        <p>Recently graduated ICT Engineer (Insinööri AMK) from Metropolia UAS,
+                            specializing in Mobile Solutions, and AWS Certified. During an
+                            internship at Good2Know I independently built and shipped a
+                            production LLM application combining web scraping and computer
+                            vision. Comfortable across the stack with JavaScript/TypeScript,
+                            React, Node.js, Python, PostgreSQL, and Swift/SwiftUI.</p>
                     </Col>
                 </Col>
 
@@ -78,11 +79,7 @@ function FirstScreenText() {
                             <Image src={catImage} rounded className="stretched-image" />
                             <div className={`Content d-flex flex-column justify-content-center align-items-center text-center ${bioVisible ? 'bio-visible' : ''}`}>
                                 <h1>About</h1>
-                                <p>As a passionate and motivated programmer with a strong desire to
-                                    learn, I am seeking a position with a dynamic programming company
-                                    where I can apply and expand my current programming knowledge and
-                                    skills. I am excited to work alongside experienced developers to learn
-                                    and grow in a fast-paced and collaborative environment.</p>
+                                <p>AWS Certified ICT Engineer who shipped a production LLM app at Good2Know.</p>
                             </div>
                         </div>
                         <p className="tap-hint d-block d-lg-none mt-2">👆 Tap image to learn more</p>

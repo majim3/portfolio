@@ -53,8 +53,7 @@ const ResumeComp = ({ now }) => {
                                 <li className='mt-3'> Prompt engineering and prompt optimization</li>
                                 <li className='mt-3'> Familiarity with neural networks and Large Language Models (LLMs)</li>
                                 <li className='mt-3'> Version Control (Git, GitHub)</li>
-                                <li className='mt-3'> moderate level of knowledge about
-                                    cloud computing (azure cloud and AWS)</li>
+                                <li className='mt-3'> AWS Certified — cloud computing (AWS, Azure fundamentals)</li>
                                 <li className='mt-3'> MySql good understanding of SQL</li>
                                 <li className='mt-3'>Mobile Development (Swift , Kotlin
                                     and React native)</li>

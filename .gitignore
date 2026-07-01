@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
 
 src/assets/video.mp4
 src/assets/video2.mp4

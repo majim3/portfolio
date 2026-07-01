@@ -11,13 +11,13 @@
     top: 10px;
     bottom: 10px;
     width: 2px;
-    background-color: #007bff;
+    background-color: var(--accent);
 }
 
 .circle {
     width: 10px;
     height: 10px;
-    background-color: #007bff;
+    background-color: var(--accent);
     border-radius: 50%;
     position: absolute;
     left: 26px;
@@ -30,7 +30,7 @@
 }
 
 .resume-date {
-    background-color: #e9ecef;
+    background-color: var(--surface);
     padding: 5px 10px;
     border-radius: 5px;
     display: inline-block;
@@ -80,5 +80,5 @@ ul {
 }
 
 .custom-progress-container .progress {
-    background-color: #e0e0e0;
+    background-color: var(--border);
 }

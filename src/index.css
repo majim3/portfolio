@@ -1,5 +1,12 @@
+@import './components/colors.css';
+
 * {
   font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
 }
 
 body {

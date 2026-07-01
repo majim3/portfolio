@@ -5,13 +5,15 @@ import useWeb3Forms from "@web3forms/react";
 import { useState, useEffect } from "react";
 import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './contactscreen.css'
 import { useInView } from 'react-intersection-observer';
 import Swal from 'sweetalert2'
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import cv from '../assets/Leo_Gong_CV_FI.pdf'
 import cvEng from '../assets/Leo_Gong_CV_web.pdf'
+
+
 
 function ContactScreen() {
 
@@ -28,14 +30,14 @@ function ContactScreen() {
         setCaptchaToken(null);
     };
 
-    const accessKey = "8f0fb3f7-620c-4bac-bba9-5914b5dfaf93";
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
 
-    "your key above pls ↑"
+    
 
     const { submit: web3Submit } = useWeb3Forms({
 
         access_key: accessKey,
-        
+
         settings: {
             from_name: "Portfolio",
             subject: "New Contact Message from your Website",
@@ -101,7 +103,7 @@ function ContactScreen() {
                 <Col sm={6} xs={12} className="mt-4 d-flex justify-content-center custom-container p-4">
                     <Row className="d-flex justify-content-center text-center">
                         <Col className="d-flex justify-content-center">
-                            <div className="mx-2">
+                            <div className="mx-4">
                                 <a
                                     href="https://www.linkedin.com/in/leo-gong-585538155/"
                                     className="icon-link"
@@ -111,27 +113,7 @@ function ContactScreen() {
                                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                                 </a>
                             </div>
-                            <div className="mx-2">
-                                <a
-                                    href="https://www.facebook.com/leo.go.10004"
-                                    className="icon-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <FontAwesomeIcon icon={faFacebook} size="2x" />
-                                </a>
-                            </div>
-                            <div className="mx-2">
-                                <a
-                                    href="https://www.instagram.com/Leoryoo/"
-                                    className="icon-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <FontAwesomeIcon icon={faInstagram} size="2x" />
-                                </a>
-                            </div>
-                            <div className="mx-2">
+                            <div className="mx-4">
                                 <a
                                     href="https://github.com/majim3"
                                     className="icon-link"
