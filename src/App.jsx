@@ -21,19 +21,27 @@ import FirstScreenText from './components/firstscreentext.jsx'
 import Contact from './components/contactscreen.jsx'
 import { Container } from 'react-bootstrap'
 import ResumeComp from './components/ResumeComp.jsx'
+import CanvasComp from './components/CanvasComp.jsx'
+import { useIsMobile } from './hooks/useIsMobile.jsx'
+
 
 function App() {
 
-  const [progress, setProgress] = useState(70);
+  const [progress, setProgress] = useState(100);
+  const [navVisible, setNavVisible] = useState(false);
+  const isMobile = useIsMobile();
+
 
 
   return (
     <>
 
-      <Navbar />
-      
-        <Col className='mb-5'>
-          <Col name="HomeSection" className="pt-sm-5 pb-sm-5 mb-3 justify-content-center align-items-center ImageSection" >
+      <Navbar visible={navVisible} />
+        <Col>
+          <Col name="canvas" className="justify-content-center align-items-center" >
+            <CanvasComp isMobile={isMobile} onEnd={setNavVisible} />
+          </Col>
+          <Col name="HomeSection" className="  pt-sm-5 pb-sm-5 mb-3 justify-content-center align-items-center ImageSection " >
             <FirstScreenText />
           </Col>
           <Col name="ResumeSection" className='pt-4 mb-3 ImageSection '>

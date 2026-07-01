@@ -8,7 +8,7 @@ import { Link } from 'react-scroll'
 import './Navbar.css'
 
 
-function Navibar() {
+function Navibar({ visible = true }) {
   const [scrolled, setScrolled] = useState(false);
   const [scrollUp, setScrollUp] = useState(false);
 
@@ -30,9 +30,10 @@ useEffect(() => {
       
   return (
     <Navbar expand="lg" fixed="top" className={`navbar transition ${
-        scrolled ? "bg-white shadow-sm py-2" : "bg-transparent py-3"}`}>
+        scrolled ? "bg-white shadow-sm py-2" : "bg-transparent py-3"} ${
+        visible ? "" : "nav-hidden"}`}>
       <Container className=' '>
-        <Navbar.Brand href="#" className={`transition ${scrolled ? "opacity-0 translate-up" : "opacity-100"} fs-3 fw-bold`}>
+        <Navbar.Brand href="#" className="transition opacity-100 fs-3 fw-bold">
           Leo Gong
           </Navbar.Brand>
         <Navbar.Toggle aria-controls='navbarScroll' data-bs-target="#navbarScroll" />

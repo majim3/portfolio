@@ -128,7 +128,7 @@ const ResumeComp = ({ now }) => {
                         <Col className="resume-item">
                             <h5>Bachelor of Engineering in Information Technology</h5>
 
-                            <p className="resume-date">2021 - 2025</p>
+                            <p className="resume-date">2021 - 2026</p>
                             <div className="custom-progress-container">
                                 <ProgressBar now={now} label={`${now}%`} />
                             </div>

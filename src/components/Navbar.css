@@ -58,3 +58,8 @@
 .opacity-100 {
   opacity: 1;
 }
+
+.nav-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
