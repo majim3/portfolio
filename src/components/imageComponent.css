@@ -31,7 +31,7 @@
 
 .image-container .half {
   width: 100%;
-  margin-right: 20px;
+  margin-right: 20px; 
   background-color: var(--surface);
 }
 
