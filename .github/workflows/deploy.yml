@@ -30,7 +30,7 @@ jobs:
       name: Deploy
       needs: test
       runs-on: ubuntu-latest
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/ci/cd'
 
       steps:
         - name: Download artifact
