@@ -7,7 +7,7 @@ import { Container } from 'react-bootstrap'
 import { Link } from 'react-scroll'
 import './Navbar.css'
 
-
+//test
 function Navibar({ visible = true }) {
   const [scrolled, setScrolled] = useState(false);
   const [scrollUp, setScrollUp] = useState(false);
