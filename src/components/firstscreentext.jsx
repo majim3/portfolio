@@ -31,15 +31,15 @@ function FirstScreenText() {
                             <Typewriter
                                 onInit={(typewriter) => {
                                     typewriter
-                                        .typeString('<span>I am a <strong>Developer</strong> </span>')
-                                        .pauseFor(400)
-                                        .deleteChars(10)
-                                        .typeString('<span><strong>Problem solver</strong></span>')
-                                        .pauseFor(400)
-                                        .deleteChars(14)
-                                        .typeString('<span> <strong>AWS Certified</strong></span>')
-                                        .pauseFor(400)
-                                        .deleteAll(50)
+                                        .typeString('<span>I build <strong>web apps</strong></span>')
+                                        .pauseFor(1200)
+                                        .deleteAll(40)
+                                        .typeString('<span>I build <strong>mobile apps</strong></span>')
+                                        .pauseFor(1200)
+                                        .deleteAll(40)
+                                        .typeString('<span>I build <strong>with AI</strong></span>')
+                                        .pauseFor(1200)
+                                        .deleteAll(40)
                                         .start();
                                 }}
                                 options={{
@@ -64,22 +64,17 @@ function FirstScreenText() {
                     </Col>
 
                     <Col className="d-none d-lg-block bio-desktop text-start">
-                        <p>Recently graduated ICT Engineer (Insinööri AMK) from Metropolia UAS,
-                            specializing in Mobile Solutions, and AWS Certified. During an
-                            internship at Good2Know I independently built and shipped a
-                            production LLM application combining web scraping and computer
-                            vision. Comfortable across the stack with JavaScript/TypeScript,
-                            React, Node.js, Python, PostgreSQL, and Swift/SwiftUI.</p>
+                        <p>ICT Engineer (Insinööri AMK) from Metropolia UAS, specialized in Mobile Solutions. During my internship at Good2Know I built an AI prototype that recognizes license plates and VINs from images, using computer vision, web scraping and a Node.js REST API. I work across the stack with JavaScript/TypeScript, React, Node.js, Python, PostgreSQL and Swift/SwiftUI, and I have studied AWS cloud architecture.</p>
                     </Col>
                 </Col>
 
-                <Col lg={6} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom mb-3`}>
+                <Col lg={6} ref={ref2} className={`element ${inView2 ? 'fadeInS' : 'hidden'} custom mb-3 mt-5`}>
                     <Container className='container d-flex flex-column justify-content-center align-items-center text-center'>
                         <div className="image-containerFirst" onClick={() => setBioVisible(v => !v)}>
                             <Image src={catImage} rounded className="stretched-image" />
-                            <div className={`Content d-flex flex-column justify-content-center align-items-center text-center ${bioVisible ? 'bio-visible' : ''}`}>
+                            <div className={`Content d-flex flex-column justify-content-center align-items-center text-center p-1 ${bioVisible ? 'bio-visible' : ''}`}>
                                 <h1>About</h1>
-                                <p>AWS Certified ICT Engineer who shipped a production LLM app at Good2Know.</p>
+                                <p>ICT Engineer who built an AI vehicle-recognition prototype at Good2Know.</p>
                             </div>
                         </div>
                         <p className="tap-hint d-block d-lg-none mt-2">👆 Tap image to learn more</p>

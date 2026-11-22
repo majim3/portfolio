@@ -128,9 +128,6 @@ const ResumeComp = ({ now }) => {
                             <h5>Bachelor of Engineering in Information Technology</h5>
 
                             <p className="resume-date">2021 - 2026</p>
-                            <div className="custom-progress-container">
-                                <ProgressBar now={now} label={`${now}%`} />
-                            </div>
 
                             <p>Metropolia university of applied sciences</p>
                         </Col>

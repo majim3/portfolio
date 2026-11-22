@@ -126,7 +126,7 @@ function ContactScreen() {
                         </Col>
 
                         <Card.Text className="mt-3 mb-3">
-                            <a href="tel:+358 408278956" className="call-button">Puh: +358 408278956</a>
+                            <a href="tel:+358 408278956" className="call-button">Phone: +358 408278956</a>
                         </Card.Text>
                         <Card.Text className="mb-3">
                             <a href="mailto:LeoGong3@gmail.com" className="call-button">LeoGong3@gmail.com</a>
