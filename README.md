@@ -43,6 +43,10 @@ Pushes to `master` run [`.github/workflows/deploy.yml`](.github/workflows/deploy
 
 Leo built most of the site himself. In the final stage he used Cursor's AI coding agent for specific fixes, under his own direction.
 
+## Why not WordPress?
+
+Leo did not use WordPress or any other ready-made site builder. He wanted to show his skills by building and publishing the site himself, since that shows his own know-how.
+
 ## Contact
 
 leo.gong.dev@gmail.com
