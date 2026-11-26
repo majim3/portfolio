@@ -129,7 +129,7 @@ function ContactScreen() {
                             <a href="tel:+358 408278956" className="call-button">Phone: +358 408278956</a>
                         </Card.Text>
                         <Card.Text className="mb-3">
-                            <a href="mailto:LeoGong3@gmail.com" className="call-button">LeoGong3@gmail.com</a>
+                            <a href="mailto:leo.gong.dev@gmail.com" className="call-button">leo.gong.dev@gmail.com</a>
                         </Card.Text>
 
                         <Button variant="dark" className="mb-4  call-button" onClick={downloadCVFin}>CV Fin</Button>

@@ -35,7 +35,7 @@ const ResumeComp = ({ now }) => {
             <Row>
                 <Col xs={12} ref={ref2} className={`element ${inView2 ? 'fadeIn' : 'hidden'} text-center`}>
                     <h1>Resume</h1>
-                    <p>A seasoned Developer with a passion for solutions and robust backend systems.</p>
+                    <p>A recently graduated developer with a passion for solutions and robust backend systems.</p>
                 </Col>
             </Row>
 
@@ -53,7 +53,7 @@ const ResumeComp = ({ now }) => {
                                 <li className='mt-3'> Prompt engineering and prompt optimization</li>
                                 <li className='mt-3'> Familiarity with neural networks and Large Language Models (LLMs)</li>
                                 <li className='mt-3'> Version Control (Git, GitHub)</li>
-                                <li className='mt-3'> AWS Certified — cloud computing (AWS, Azure fundamentals)</li>
+                                <li className='mt-3'> Cloud: AWS Academy Cloud Architecting Training Badge, Metropolia AWS course (5/5), Azure basics</li>
                                 <li className='mt-3'> MySql good understanding of SQL</li>
                                 <li className='mt-3'>Mobile Development (Swift , Kotlin
                                     and React native)</li>
@@ -107,9 +107,9 @@ const ResumeComp = ({ now }) => {
                         <div className="resume-item mt-5">
                             <h5>Software Development Intern</h5>
                             <p>Good2know</p>
-                            <p className="resume-date">Jul 2025 - Sep 2025</p>
+                            <p className="resume-date">Jun 2025 - Sep 2025</p>
                             <ul>
-                                <li className='mt-3'>Led my own project independently from concept to delivery for end users.</li>
+                                <li className='mt-3'>Built an AI-powered vehicle identification prototype (concept level, Bachelor's thesis).</li>
                                 <li className='mt-3'> Gained exposure to the marketing side of product development.</li>
                                 <li className='mt-3'> Took responsibility for making technical decisions and solving coding challenges.</li>
                             </ul>
